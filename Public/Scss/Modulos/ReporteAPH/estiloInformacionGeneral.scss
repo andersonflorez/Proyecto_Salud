@@ -1,0 +1,18 @@
+@import "../../Base/_variables.scss";
+@import "../../Base/_funciones.scss";
+
+
+.divider{
+  border:dashed 1px rgba(#000 , .2);
+  margin:2em 0em;
+}
+
+
+#panel-clasiSituacion{
+  @include desde(hd) {
+    height: 21.5em;
+  }
+  @include hasta(hd) {
+    height: 22.2em;
+  }
+}

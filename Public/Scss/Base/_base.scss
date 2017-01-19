@@ -1,0 +1,172 @@
+/*============= ESTILOS BASICOS  ==============*/
+
+//Estilos basicos body
+body {
+  background  : $body-fondo;
+  font-family : $body-font-family;
+  color       : $body-color;
+  font-size   : $font-size-md;
+  transition: all ease 0.4s;
+}
+
+//Estilos basicos links (<a></a>)
+a {
+  color           : $link-color;
+  text-decoration : none;
+}
+
+input:focus{
+  outline-color: transparent;
+}
+
+// Estilos básicos de los encabezados
+h1, h2, h3, h4, h5, h6 {
+  font-family    : $header-font-family;
+  font-weight    : $header-font-weight;
+  text-transform : $header-text-transform;
+  color          : $negro;
+}
+
+// Tamaños y estilos de los encabezados:
+h1 {
+  font-size : $h1-font-size;
+  line-height: 1.2;
+}
+
+
+// Titulo de la vista
+.titulo_vista{
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(#000 , .6);
+  text-transform: none;
+  border-bottom: dashed 1px rgba($negro , .2);
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 0.8em;
+  padding: 0.6em;
+  display: flex;
+  align-items:  center;
+  justify-content: flex-start;;
+  text-align: center;
+  padding-left: 0.5em;
+  transition: all ease 0.4s;
+  box-sizing: border-box;
+
+  @include hasta(movil) {
+    justify-content: center;
+  }
+
+  span{
+    padding-right: 0.3em;
+    font-size: 35px;
+  }
+
+}
+
+
+// Contenedor principal de la pagina
+.main_vista{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 93%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+h2 {
+  font-size : $h2-font-size;
+}
+
+h3 {
+  font-size : $h3-font-size;
+}
+
+h4 {
+  font-size : $h4-font-size;
+}
+
+h5 {
+  font-size : $h5-font-size;
+}
+
+h6 {
+  font-size : $h6-font-size;
+}
+
+//Cambiar el estilo del Scroll
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+  transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-button {
+  width: 5px;
+  height: 0px;
+  transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(236, 240, 241,1.0);
+  border: thin solid #777;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+  transition: all ease 0.5s;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border: thin solid #232c34;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $negro;
+  transition: all ease 0.5s;
+}
+/* Pseudo-clase */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: $negro-claro;
+  transition: all ease 0.5s;
+}
+
+
+
+::-webkit-scrollbar:horizontal {
+  width: 2px;
+  height: 5px;
+  transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-button:horizontal {
+  width: 2px;
+  height: 2px;
+  transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background: transparent;
+  border-radius: 3px;
+  transition: all ease 0.5s;
+}
+
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: transparent;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background: transparent;
+  transition: all ease 0.5s;
+}
+/* Pseudo-clase */
+::-webkit-scrollbar-thumb:horizontal:window-inactive {
+  background: transparent;
+  transition: all ease 0.5s;
+}

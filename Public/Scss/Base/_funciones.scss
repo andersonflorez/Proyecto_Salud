@@ -1,0 +1,297 @@
+/* MIXINS O FUNCIONES */
+
+//Mixin para colocar border radius a un elemento en cualquier esquina.
+@mixin border-radius($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0) {
+  border-top-right-radius : $topright;
+  border-bottom-right-radius : $bottomright;
+  border-bottom-left-radius : $bottomleft;
+  border-top-left-radius : $topleft;
+  background-clip : padding-box;
+}
+
+//Cambia el color  del placeholder de un input el cual viene por defecto.
+@mixin placeholder-color($color){
+  &::-webkit-input-placeholder { color: $color; }
+  &::-moz-placeholder { color: $color; }
+  &::-ms-input-placeholder { color: $color; }
+  &::-moz-placeholder { color: $color; }
+}
+
+//Oculta un texto determinado
+@mixin hide-text{
+  overflow:hidden;
+  text-indent:-9000px;
+  display:block;
+}
+
+//Oculta un texto determinado
+@mixin display-flex($propiedades,$justify){
+  //space-between
+  @if $propiedades==3 and $justify==1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @else if $propiedades==2 and $justify==1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  //Center
+  @if $propiedades==3 and $justify==2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @else if $propiedades==2 and $justify==2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  //space-around
+  @if $propiedades==3 and $justify==3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @else if $propiedades==2 and $justify==3 {
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  @if $propiedades==2 and $justify==0 {
+    display: flex;
+    align-items: center;
+  }
+  @else if $propiedades==1 and $justify==0{
+    display: flex;
+  }
+
+}
+
+
+// Mixins para media queries
+// El parámetro es el nombre del breakpoint
+
+// breakpoint
+@mixin hasta($size){
+  @if map-has-key($breakpoints,$size){
+    // Si el parámetro es el nombre de un tamaño, se extrae desde el map
+    @media screen and (max-width: map-get($breakpoints,$size) - 1){
+      @content;
+    }
+  } @else {
+    // Si el parámetro no existe en el map, se toma su valor para construir la media query
+    @media screen and (max-width: $size){
+      @content;
+    }
+  }
+}
+
+// specific_breakpoints
+@mixin _hasta($size){
+  @if map-has-key($specific_breakpoints,$size){
+    // Si el parámetro es el nombre de un tamaño, se extrae desde el map
+    @media screen and (max-width: map-get($specific_breakpoints,$size) - 1){
+      @content;
+    }
+  } @else {
+    // Si el parámetro no existe en el map, se toma su valor para construir la media query
+    @media screen and (max-width: $size){
+      @content;
+    }
+  }
+}
+
+
+// breakpoint
+@mixin desde($size){
+  @if map-has-key($breakpoints,$size){
+    // Si el parámetro es el nombre de un tamaño, se extrae desde el map
+    @media screen and (min-width: map-get($breakpoints,$size)){
+      @content;
+    }
+  } @else {
+    // Si el parámetro no existe en el map, se toma su valor para construir la media query
+    @media screen and (min-width: $size){
+      @content;
+    }
+  }
+}
+
+// specific_breakpoints
+@mixin _desde($size){
+  @if map-has-key($specific_breakpoints,$size){
+    // Si el parámetro es el nombre de un tamaño, se extrae desde el map
+    @media screen and (min-width: map-get($specific_breakpoints,$size)){
+      @content;
+    }
+  } @else {
+    // Si el parámetro no existe en el map, se toma su valor para construir la media query
+    @media screen and (min-width: $size){
+      @content;
+    }
+  }
+}
+
+
+// breakpoint
+@mixin desde-hasta($desde,$hasta){
+  @if map-has-key($breakpoints,$desde) and map-has-key($breakpoints,$hasta){
+    @media screen and (min-width: map-get($breakpoints,$desde)) and (max-width: map-get($breakpoints,$hasta) - 1){
+      @content;
+    }
+  } @else if map-has-key($breakpoints,$desde) and not map-has-key($breakpoints,$hasta){
+    @media screen and (min-width: map-get($breakpoints,$desde)) and (max-width: $hasta) {
+      @content;
+    }
+  } @else if not map-has-key($breakpoints,$desde) and map-has-key($breakpoints,$hasta) {
+    @media screen and (min-width: $desde) and (max-width: map-get($breakpoints,$hasta) - 1){
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $desde) and (max-width: $hasta){
+      @content;
+    }
+  }
+}
+
+// specific_breakpoints
+@mixin _desde-hasta($desde,$hasta){
+  @if map-has-key($specific_breakpoints,$desde) and map-has-key($specific_breakpoints,$hasta){
+    @media screen and (min-width: map-get($specific_breakpoints,$desde)) and (max-width: map-get($specific_breakpoints,$hasta) - 1){
+      @content;
+    }
+  } @else if map-has-key($specific_breakpoints,$desde) and not map-has-key($specific_breakpoints,$hasta){
+    @media screen and (min-width: map-get($specific_breakpoints,$desde)) and (max-width: $hasta) {
+      @content;
+    }
+  } @else if not map-has-key($specific_breakpoints,$desde) and map-has-key($specific_breakpoints,$hasta) {
+    @media screen and (min-width: $desde) and (max-width: map-get($specific_breakpoints,$hasta) - 1){
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $desde) and (max-width: $hasta){
+      @content;
+    }
+  }
+}
+
+//TEN CUIDADO CON ESTAS FUNCIONES YA QUE PUEDES ESTROPEAR LA GRID
+
+//Para sobrescribir los estilos de la fila
+@mixin overwrite-fila {
+  [class^="fila"]{
+    @content;
+  }
+}
+//Para sobrescribir los estilos de la columna
+@mixin overwrite-columna {
+  [class^="columna"]{
+    @content;
+  }
+}
+
+//Coloca sombra alargada
+@function long-shadow($numero,$color,$direccion) {
+
+  @if ($direccion=='der') {
+    $box-shadow: 1px 1px #{$color};
+    @for $i from 1 through $numero{
+      $box-shadow:'#{$box-shadow},
+      #{$i}px #{$i}px #{$color}';
+    }
+    @return unquote($box-shadow);
+  }
+  @else{
+    $box-shadow: -1px 1px #{$color};
+    @for $i from 1 through $numero{
+      $box-shadow:'#{$box-shadow},
+      #{-$i}px #{$i}px #{$color}';
+    }
+    @return unquote($box-shadow);
+  }
+}
+
+
+/**
+* Se encarga de crear la estructura de titulos para las tablas responsives
+*/
+@mixin nombreCampos($campos...) {
+
+    table.tbl_responsive,
+    table.tbl_responsive thead,
+    table.tbl_responsive tbody,
+    table.tbl_responsive th,
+    table.tbl_responsive td,
+    table.tbl_responsive tr {
+      display: block;
+    }
+    .tbl_responsive thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    .tbl_responsive tr {
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      margin-bottom: 2em;
+      background: #fff;
+    }
+    .tbl_responsive td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      &:nth-last-child(1){
+        border-bottom: 0px solid #ddd;
+      }
+    }
+    .tbl_responsive td::before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      margin-left: 1em ;
+      white-space: nowrap;
+      color: #14947C;
+      font-weight: bold;
+    }
+
+    @for $i from 1 through length($campos) {
+     $campo: nth($campos, $i);
+     td:nth-of-type(#{$i}):before {
+        content: $campo;
+      }
+    }
+
+}
+
+// Función para agregar puntos susoensivos la texto,
+// recibe como parámetro el número de la línea a partir del cual apareceran los puntos
+@function getSuspensivePosition($lines) {
+  @return ($line_height * $lines) - $line_height;
+}
+
+@function getMaxHeight($lines) {
+  @return $line_height * $lines;
+}
+
+@mixin SuspensiveLine($lines) {
+  line-height: $line_height;
+  .paragraph{
+    position: relative;
+    overflow: hidden;
+    max-height: getMaxHeight($lines);
+    text-align: justify;
+    &::after{
+      content: '...';
+      position: absolute;
+      top: getSuspensivePosition($lines);
+      right: 0;
+      background-color: #fff;
+    }
+  }
+}

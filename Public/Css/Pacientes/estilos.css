@@ -1,0 +1,24 @@
+.barra-filtro .input-barra>input{
+	border-right: 1px solid rgba(0, 0, 0, 0.14902);
+}
+.panel .panel-cabecera h3{
+	text-align: center;
+}
+ul.list_panel li.list_item{
+width: 339px !important;
+}
+
+.d1{background-color: black}
+.d2{background-color: yellow}
+.d3{background-color: green}
+.flecha-der, .flecha-izq{
+border: 0px;
+}
+.frmCont{
+	width: 100%; !important;
+}
+
+#contenedor{
+border: none !important;
+background: red;
+}

@@ -1,0 +1,290 @@
+@import "../../Base/_variables.scss";
+@import "../../Base/_funciones.scss";
+
+
+body{
+	background: #EBEBEB !important;
+}
+.main_vista{
+	width: 100%;
+	padding: 2em 2.6em;/*
+	@include desde-hasta(0,tablet){
+	background: red;
+	padding: 2em 0.5em;
+}*/
+@include desde-hasta(0,tablet){
+	padding: 2em 0em;
+}
+@include desde-hasta(768px,910px){
+	padding: 2em 0.5em;
+}
+
+}
+
+#tipoDocumento,#tipoDocParamedico {
+	width: 40em;
+}
+.ocultarInput{
+	border: none;
+	height: 15%;
+}
+
+#frmaMedico,#frmaParamedico {
+	height: 1.5em;
+	width: 50%;
+	//margin-left: 0.5em !important;
+	//margin-top: 8px;
+}
+.obligatoriosCampos{
+	color:red;
+}
+#lblFirma{
+	margin-bottom: 2em !important;
+}
+
+#numeroMedico,#numeroParamedico {
+	width: 55%;
+}
+
+
+.contenido-vista{
+	display: flex;
+	flex-direction: row;
+}
+
+.radios{
+	border: none !important;
+	display: flex;
+	padding: 1.2em;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+.checkTipoEvento {
+  border: 1px solid #AD0303 !important;
+	width: 100% !important;
+}
+.border-bottom{
+	border-bottom:dashed 1px rgba(0,0,0,0.15);
+}
+
+.no-padding{
+	padding: 0 !important;
+
+}
+
+.sombra-punteada {
+	border-bottom: 1px dashed rgba(0,0,0,0.4) !important;
+}
+.sombra {
+	border-top: 1px solid rgba(0,0,0,0.12) !important;
+	border-bottom: 1px solid rgba(0,0,0,0.12) !important;
+}
+.sombra1 {
+	border-bottom: 1px solid rgba(0,0,0,0.12) !important;
+}
+
+.subtitulo{
+	display: flex;
+	width: 90%;
+	margin: 2em 5%;
+	font-family: 'Arial';
+	font-weight: bold;
+}
+.margin-b{
+	margin-bottom: 0.5em !important;
+}
+
+#correrNota{
+	margin-left: 1em !important;
+	margin-bottom: 2em !important;
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+.frmCont{
+	width: 90%;
+	margin: 0 auto;
+	padding: 1em 0;
+	>input, textarea{
+	}
+}
+
+#rojo{
+	color: red;
+	padding-left: 5px;
+	padding-right: 3px;
+}
+
+
+
+div.testigo{
+	margin-bottom: 3em;
+	.testigo-titulo{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+		span{
+			margin: 0 0 0 0.5em;
+			font-size: 2.3em;
+			padding: 0.4em 0.5em;
+			color:rgba(0, 0, 0, .6);
+		}
+		h4{
+			font-family: 'arial';
+			font-weight: bold;
+			color:rgba(0, 0, 0, .6);
+		}
+	}
+	.testigo-contenido{
+		padding: 0 0 1em 0;
+	}
+}
+
+
+.personal-recibe{
+
+	.personal-titulo{
+
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		.personal-img{
+			width: 135px;
+			margin: 5px 0;
+			height:100px;
+			img{
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+			}
+		}
+		h4{
+			font-weight: bold;
+			color: rgba(0,0,0,.8);
+			font-size: 16px;
+		}
+
+	}
+	.personal-cuerpo{
+		margin-top: 0.5em;
+		border-top: 1px solid rgba(0,0,0,0.12) !important;
+		@include desde-hasta(768px,910px){
+			padding: 23px 0 !important;
+
+		}
+		p{
+			font-weight: bold;
+			margin: 0 15px;
+			margin-top: 10px;
+			color: rgba(0,0,0,.8);
+			@include desde-hasta(768px,910px){
+				margin-top: 15px !important;
+			}
+			span{
+				margin-left: 8px;
+				color: rgba(0,0,0,.5);
+			}
+		}
+	}
+}
+
+.autentificacion{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	@include desde-hasta(0,425px){
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	@include desde-hasta(768px,910px){
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	>label{
+		color: rgba(0,0,0,.5);
+		width: 20%;
+	}
+}
+.botones-autentificacion{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	button{
+		font-size: 1.1em;
+		margin: 21px 0;
+		margin-right: 15px;
+
+	}
+	.margin-btn-a{
+		margin-right: 34px;
+	}
+}
+
+
+#btn-login{
+	button{
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+}
+
+.certificado-atencion{
+	.titulo-certificado{
+		font-weight: bold;
+		font-size: 1.1em;
+		margin-bottom: 10px;
+	}
+}
+
+.radios-contenido{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	@include desde-hasta(0,tablet){
+		flex-direction: column;
+	}
+	>div{
+		display: flex;
+		width: 33.33%;
+		align-items: center;
+		@include desde-hasta(0,tablet){
+			width: 100%;
+		}
+	}
+}
+
+.bold{
+	font-weight: 800 !important;
+	font-size: 1.1em !important;
+	color: #FFF !important;
+
+}
+
+.fechaYhora-finalizacion{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	p{
+		font-size: 1em;
+		font-weight: bold;
+		color: rgba(0,0,0,.8);
+		@include desde-hasta(0,580px){
+			display: flex;
+
+			flex-direction: column;
+		}
+		span{
+			margin-left: 8px;
+			color: rgba(0,0,0,.5);
+		}
+	}
+}
+.paddingBottomResultados{
+	padding-bottom: 45px;
+}

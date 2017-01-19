@@ -1,0 +1,87 @@
+@import "../../Base/_variables.scss";
+@import "../../Base/_funciones.scss";
+
+body{
+  background-color: #00B5C6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  font-size: 16px;
+}
+
+.cont_error{
+  width: 60%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+  h1 {
+    color: #ffffff;
+    font-size: 4.5em;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  h2{
+    color: #fff;
+    text-transform: none;
+    font-family: 'Segoe UI Light';
+    margin-top: .5em;
+  }
+
+  a{
+    color: #fff;
+    padding: .8em 2.5em;
+    width: auto;
+    border: 1px solid;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    margin-top: 1em;
+    &:active{
+      background-color: #fff;
+      color: #5eb4c4;
+    }
+  }
+}
+
+@include hasta(1000px) {
+  body{
+    font-size: 14px;
+  }
+
+  .cont_error{
+    width: 65%;
+  }
+
+}
+
+@include hasta(tablet) {
+  body{
+    font-size: 11px;
+  }
+
+  .cont_error{
+    width: 70%;
+  }
+
+}
+
+@include hasta(movil) {
+  body{
+    font-size: 8px;
+  }
+
+  .cont_error{
+    width: 80%;
+  }
+
+}

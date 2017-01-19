@@ -1,0 +1,862 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background: #F5F5F5;
+}
+
+section.calendario {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+section.calendario div.barra-calendario {
+  background: #F5F5F5;
+  height: 100%;
+  width: 5%;
+  display: flex;
+  align-items: flex-start;
+}
+
+section.calendario div.barra-calendario ul {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+section.calendario div.barra-calendario ul a {
+  color: #828796;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+/*section.calendario div.barra-calendario ul a li {
+  margin: 15px 0;
+}
+
+/* section.calendario div.barra-calendario ul a:hover {
+  background: #5093e1;
+  color: #fff;
+  transition: 0.3s;
+}*/
+
+section.calendario div.contenido-calendario {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario {
+  background: #F5F5F5;
+  height: 15%;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #eceded;
+  display: flex;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo {
+  width: 33.3%;
+}
+
+
+/*estilos del titulo de calendario*/
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo p {
+  margin: 10px 0 0 15px;
+  color: #b9bcc8;
+  font-size: 16px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo p strong {
+  font-size: 25px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo p span {
+  color: #5093e1;
+  font-size: 20px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #5093e1;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul li {
+  margin: 1px 10px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul .li1 {
+  color: #5093e1;
+  font-size: 12px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul .li2 {
+  text-align: center;
+  color: #b9bcc8;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul .li3 {
+  color: #5093e1;
+  font-size: 12px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-nuevo {
+  width: 33.3%;
+}
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-nuevo2 {
+  width: 33.3%;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo {
+  width: 100%;
+  height: 10%;
+  background: #F5F5F5;
+  border-bottom: 1px solid #eceded;
+  color: #b9bcc8;
+  font-weight: bold;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo ul li {
+  width: 14.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo ul li a:hover {
+cursor: default;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias {
+  width: 100%;
+  height: 82%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* aqui esta el estilo de los numeros*/
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+  left: 5px;
+  width: 14.2%;
+  height: 19.7%;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  display: flex;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.dia {
+  background-color: #1F95D0;
+  color: #fff;
+  text-align: left 10px;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie {
+  background: #F5F5F5;
+  width: 100%;
+  height: 8%;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul li {
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul li span {
+  color: #b9bcc8;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul li::before {
+  border-radius: 50%;
+  padding: 7px 8px;
+  color: #5093e1;
+  font-size: 12px;
+  border: 1px solid #5093e1;
+  margin-right: 10px;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul li:hover:before {
+  color: white;
+  background: #5093e1;
+  transition: 0.3s;
+}
+
+Correo
+REDACTAR
+Etiquetas
+Recibidos (420)
+Destacados
+Enviados
+Borradores (18)
+Más
+Chat
+JHONATAN GOMEZ LONDOÑO
+
+Buscar contactos...
+	agarmolina
+	ANDERSSON STIVEN FLOREZ RUIZ
+	Andres Felipe Gomez Zapata
+	Evelyn Arango
+	jdvahos
+	juan david ramirez londoño
+	JUAN ESTEBAN CARDONA JARAMILLO
+	Luisa Parra
+	Mateo CORTEZ GOMEZ
+	mateo gomez
+
+  Más
+1 de 730
+
+Imprimir todo En una ventana nueva
+style
+Recibidos
+x
+
+Daniel OROZCO OCHOA <dorozco50@misena.edu.co>
+Archivos adjuntos8:48 (hace 2 minutos)
+
+para mí
+
+
+
+
+Declinación de Responsabilidades: Los servicios de MISENA son soportados tecnológicamente por © Google y ofrecidos por el Servicio Nacional de Aprendizaje – SENA de manera gratuita a los aprendices e instructores de programas de formación titulada, las opiniones que contenga este mensaje son exclusivas de su autor y no representan la opinión del Servicio Nacional de Aprendizaje o de sus autoridades. El receptor deberá verificar posibles virus informáticos que tenga el correo o cualquier anexo, razón por la cual el SENA no es responsable de los daños causados por cualquier virus transmitido en este correo electrónico.
+
+Los contenidos, textos, imágenes, archivos enviados en este mensaje son responsabilidad exclusiva del remitente y no reflejan ni comprometen de ninguna manera a la institución. No se autoriza el uso de esta herramienta para el intercambio de correos masivos, cadenas o spam, ni de mensajes ofensivos, de carácter político, sexual o religioso, con fines de lucro, con propósitos delictivos o cualquier otro mensaje que se considere indebido o que vaya en contra de la Ley.
+
+Zona de los archivos adjuntos
+
+Haz clic aquí si quieres Responder o Reenviar el mensaje
+3,32 GB en uso
+Administrar
+Política del programa
+Con la tecnología de Google
+Última actividad de la cuenta: hace 11 minutos
+Información detallada
+Foto de perfil de Daniel OROZCO OCHOA
+Daniel OROZCO OCHOA
+Añadir a círculos
+
+Mostrar detalles
+
+.cont-rdo,.cont-checbox{
+    width: 100%;
+    display: inline-flex;
+    padding: 3px;
+    margin : 5px;
+}
+
+.cont-antecedente .cont-radio input[type=radio] {
+    border: 1px solid #18b9e3;
+    transition: all ease 0.4s;
+}
+
+
+input[type=radio],
+input[type=checkbox] {
+    display: none;
+}
+
+.radio label, .checkbox label {
+    border-radius: 1px;
+    border: solid 1px #18b9e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3em 0;
+    width: 60px;
+    transition: all ease 0.4s;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.checkbox label {
+    margin-bottom: 10px;
+}
+
+.checkbox label:before {
+    border-radius: 3px;
+}
+
+input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+    color: #f3f3f3;
+    background: #18b9e3;
+    text-align: center;
+}
+
+label.rdo-redondo {
+    border-radius: 50%;
+    width: 20px;
+    display: inline-flex;
+}
+
+input[type=radio] + label.rdo-redondo:before {
+    content: "";
+    position: relative;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0);
+}
+
+input[type=radio]:checked + label.rdo-redondo:before {
+    content: "";
+    position: relative;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.75);
+    transition: all 0.2s;
+}
+
+.cont-checbox{
+    width: 40%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.rdo{
+    width: 100%;
+    justify-content: space-between;
+    display: inline-block;
+}
+
+.icon-funcion:hover{
+    color: #1F95D0 !important;
+}
+.icon-funcion{
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    cursor: pointer;
+}
+/*#CmbDescripcionCups{
+width: 50%;
+}
+.panel{
+margin-left: 30px;
+margin-right: 30px;
+}*/
+#txtMotivoConsulta, #txtProcedimiento, #txtEvolucion, #txtIncapacidad,#txtEnfermedadActual,#txtNotaEnfermeria{
+    resize: none;
+    height: 35px;
+    width: 100%;
+}
+#txtMotivoConsulta, #txtEnfermedadActual, #txtEvolucion{
+    height: 100px;
+}
+
+#txtDescripcionExamenEspecializado,#txtObservacionExamenEspecializado,#txtDescripcionOtro,#txtDescripcionInterconsulta,#txtDescripcionFormulaMedica,#txtDescripcionIncapacidad{
+    resize: none;
+    height: 150px;
+    width: 100%;
+}
+#txtDosisTratamiento,#txtDescripcionTratamiento{
+    resize: none;
+    height: 75px;
+    width: 100%;
+    background-color: #fff;
+}
+#txtNotaEnfermeria{
+    height: 200px;
+}
+
+.Center{
+    -webkit-box-align: center  !important;
+    -webkit-align-items: centers !important;
+    -ms-flex-align: center !important;
+    -ms-grid-row-align: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.Center input[type="checkbox"]{
+    width: auto;
+    margin: 0 20px 0 20px;
+}
+
+.radio{
+    margin:10px 0px 10px 0px;
+}
+
+
+
+/*Ordenes medicas*/
+.nav{
+
+
+    -webkit-box-align: center;
+
+    -webkit-align-items: center;
+    -moz-align-items: center;
+
+    -ms-flex-align: center;
+    -moz-flex-align: center;
+
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -moz-flexbox;
+    display: flex;
+    margin: 10px;
+
+}
+/*
+.nav .nav-cont a{
+color: #777;
+}
+
+.nav-cont{
+padding: 5px;
+border: 1px solid #1F95D0;
+border-radius: 2px;
+padding: 10px;
+}
+
+.nav-item{
+padding: 5px;
+display: -webkit-inline-box;
+display: -webkit-inline-flex;
+display: -ms-inline-flexbox;
+display: inline-flex;
+}
+
+.nav-cont a:hover{
+text-decoration: overline;
+color: #1F95D0;
+}
+*/
+.btn-top{
+    height: 45px;
+}
+.btn-status0{
+}
+
+.btn-status1{
+}
+
+#tituloM{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.espacio{
+    margin-top: 20px;
+}
+.centrar-label{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: center !important;
+    -ms-flex-line-pack: center !important;
+    align-content: center !important;
+    -webkit-box-align: center !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    text-align: center;
+}
+
+.checkbox label {
+    margin-bottom: 0 !important;
+}
+
+.frmCont{
+    width: 100%;
+}
+
+
+tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered{
+    white-space: pre-line;
+    height: 35px;
+}
+
+.select2-container{
+    margin-top: -20px !important;
+    display: block;
+}
+.panel{
+    overflow: overlay;
+}
+.contenedor-principal{
+    height: 100%;
+}
+
+/*
+@media only screen and (min-width: 1400px) {
+#tablaVitales{
+width: 131.5% !important;
+}
+}
+*/
+/*#tablaVitales input{
+border: 2px solid #E5E5E5;
+}
+*/
+.select2-container--default .select2-selection--single{
+    overflow: hidden;
+}
+.containerTable{
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+}
+/*.containerTable .dataTables_wrapper{
+white-space: normal;
+}*/
+
+.scroll-panel{
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.panel-cabecera h3{
+    color: #1F95D0 !important;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: transparent;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+
+::-webkit-scrollbar-button {
+    width: 5px;
+    height: 2px;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CCCAB8;
+    border: thin solid #CCCAB8;
+    border-radius: 10px;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #BAB8A8;
+    border: thin solid #BAB8A8;
+    border-radius: 10px;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: thin solid transparent;
+    box-shadow: inset 0 0 6px transparent;
+    border-radius: 3px;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.contenedor-principal .menu-principal-maestras {
+    width: 370px;
+}
+
+.contenedor-principal .menu-principal-maestras li{
+    margin-left: 60px;
+    border-left: 1px solid #E6E6E6;
+}
+@media screen and (max-width: 900px){
+    .contenedor-principal .menu-principal-maestras {
+        width: 120px !important;
+        border: 0 none;
+        overflow: initial;
+    }
+}
+
+.flecha-der, .flecha-izq{
+    border: 0;
+}
+
+.radioError{
+    border: 1px solid #AD0303 !important;
+}
+
+
+.itemMenuError{
+    color:#AD0303 !important;
+}
+.panelAtencionSeleccionado{
+    -webkit-box-shadow: 2px 2px 2px 1px rgba(99, 99, 99, 0.35) !important;
+    -o-box-shadow: 2px 2px 2px 1px rgba(99, 99, 99, 0.35) !important;
+    box-shadow: 2px 2px 2px 1px rgba(99, 99, 99, 0.35) !important;
+
+}
+
+.acordeonTitulo{
+    cursor: pointer;
+    height: 32px;
+}
+.acordeonTitulo h6{
+    color: #1F95D0;
+    margin-top: 3px;
+}
+.panelAcordeon{
+    border: solid 1px rgba(0,0,0,0.1);
+}
+.panelAcordeon > .panel-cabecera{
+    border-bottom: solid 1px rgba(0,0,0,0.1);
+    height: 30px;
+}
+.panelAcordeon > .panel-cabecera{
+    margin-top: 11px;
+}
+.font-Blue{
+    color: #1F95D0;
+}
+
+.horizontal_padding>h3{
+    font-weight: bold;
+    margin-right: auto;
+}
+.notasEnfermeria{
+    float: right;
+    margin-bottom: 1%;
+
+}
+.festivo{
+   color: white;
+  font-size: 20px;
+  border: blue;
+  background-color: #E75B74;
+}
+.color{
+  background: red;
+}
+.contenedor:hover{
+  background: rgba(31,149,208,0.5);
+  color: #fff;
+}
+.contenedor{
+  position: relative;
+}
+.li1{
+  background-color: #F5F5F5;
+}
+.li3{
+  background-color: #F5F5F5;
+}
+
+/*medias querys*/
+/*_____________________________________________________________________________________________________*/
+/*_____________________________________________________________________________________________________*/
+@media(max-width: 1366px){
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+    width: 100%;
+    height: 10%;
+    background: white;
+    border-bottom: 1px solid #eceded;
+    color: #b9bcc8;
+    font-weight: bold;
+    display: none;
+    cursor: default;
+}
+}
+/*dispositivos pequeños*/
+@media (max-width: 720px){
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+  width: 14.2%;
+  height: 19.7%;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  display: flex;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias {
+    width: 100%;
+    height: 82%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo {
+    width: 100%;
+    height: 10%;
+    background: white;
+    border-bottom: 1px solid #eceded;
+    color: #b9bcc8;
+    font-weight: bold;
+    display: none;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+    width: 100%;
+    height: 10%;
+    background: #F5F5F5;
+    border-bottom: 1px solid #eceded;
+    color: #b9bcc8;
+    font-weight: bold;
+    display: block;
+    cursor: default;
+  }
+  section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul li {
+    width: 14.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul li a:hover {
+cursor: default;
+}
+
+}
+/*@media (max-width: 380px){
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo {
+    width: 33.3%;
+    display: none;
+}
+
+}*/
+/* media query para pantalla de pc */
+@media (min-width: 721px){
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+  left: 3px;
+  width: 14.2%;
+  height: 19.7%;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  display: flex;
+}
+}
+/*patallas hd*/
+@media (min-width: 1025px){
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+    width: 100%;
+    height: 10%;
+    background: white;
+    border-bottom: 1px solid #eceded;
+    color: #b9bcc8;
+    font-weight: bold;
+    display: none;
+    cursor: default;
+  }
+  section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul li a:hover {
+  cursor: default;
+  }
+
+}
+/**/
+@media(max-width: 720px;){
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo2 {
+    width: 33.3%;
+    cursor: default;
+}
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo2 p {
+    margin: 10px 0 0 15px;
+    color: #b9bcc8;
+    font-size: 16px;
+    display: none;
+    cursor: default;
+}
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul li a:hover {
+cursor: default;
+}
+
+}
+
+/* padding-top: 10px !important;
+  padding-left: 50px !important;
+  position: absolute;
+  visibility: hidden;*/
+.encabezado-nuevo{
+   width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+}
+.encabezado-nuevo2{
+  width: 38%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;*/
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*@media (max-width: 720px){
+.calendario-dias{
+width:10.5%;
+
+}*/
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias {
+    width: 100%;
+    height: 82%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+}

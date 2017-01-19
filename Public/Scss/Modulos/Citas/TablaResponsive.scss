@@ -1,0 +1,27 @@
+// Importante incluir estos dos archivos
+@import "../../base/_variables.scss";
+@import "../../base/_funciones.scss";
+
+/**
+* Configuración de la tabla responsive #tbl_ejemplo
+*/
+#tbl_ejemplo{
+  margin-bottom: 3em; // Esto no es necesario
+
+  // Con _hasta(md), hasta(tablet) manipulas la resolución de donde quieres que se transforme la tabla solo debes especificar la medida.
+  @include _hasta(md) {
+
+    // Para poder lograr el cambio de estructura de la tabla fue necesario eliminar las etiquetas de las columnas y colocarlas manualmente con el pseudo elemento ::before asi que es importante que coloques los nombres de las columnas asi:
+    @include nombreCampos(
+    "Nombre",
+    "Apellidos",
+    "Cargo",
+    "Twitter",
+    "ID"
+    );
+  }
+}
+
+// Fin Configuración de la tabla responsive #tbl_ejemplo
+
+         

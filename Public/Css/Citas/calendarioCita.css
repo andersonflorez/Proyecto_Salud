@@ -1,0 +1,609 @@
+
+section.calendario {
+    height: 100%;
+    width: 100%;
+}
+
+section.calendario div.barra-calendario {
+    background: #F5F5F5;
+    height: 100%;
+    width: 5%;
+    display: flex;
+    align-items: flex-start;
+}
+
+section.calendario div.barra-calendario ul {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+section.calendario div.barra-calendario ul a {
+    color: #828796;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+}
+
+section.calendario div.barra-calendario ul a li {
+    margin: 15px 0;
+}
+
+/*section.calendario div.barra-calendario ul a:hover {
+    background: #5093e1;
+    color: #fff;
+    transition: 0.3s;
+}*/
+
+section.calendario div.contenido-calendario {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario {
+    background: white;
+    height: 15%;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid #eceded;
+    display: flex;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo {
+    width: 33.3%;
+}
+
+
+/*estilos del titulo de calendario*/
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo p {
+    margin: 10px 0 0 15px;
+    color: #b9bcc8;
+    font-size: 16px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo p strong {
+    font-size: 25px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo p span {
+    color: #5093e1;
+    font-size: 20px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses {
+    padding-left: 49%;
+    padding-bottom: 33px;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #5093e1;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul li {
+    margin: 1px 10px;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul .li1 {
+    color: #5093e1;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul .li2 {
+    text-align: center;
+    color: #b9bcc8;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-meses ul .li3 {
+    color: #5093e1;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+}
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-nuevo {
+    width: 33.3%;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo {
+    width: 100%;
+    height: 10%;
+    background: white;
+    border-bottom: 1px solid #eceded;
+    color: #b9bcc8;
+    font-weight: bold;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo ul li {
+    width: 14.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo ul li a:hover {
+    color: #CCEEED;
+}*/
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias {
+    width: 100%;
+    height: 82%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* aqui esta el estilo de los numeros*/
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+    width: 14.2%;
+    height: 19.7%;
+    border-bottom: 1px solid #eceded;
+    border-right: 1px solid #eceded;
+    display: flex;
+    border-color: rgba(10, 13, 25, 0.12);
+}
+
+/*validar cantidad de dias de calendario*/
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.validacion {
+    width: 14.2%;
+    height: 19.7%;
+    border-bottom: 1px solid #eceded;
+    border-right: 1px solid #eceded;
+    display: flex;
+}
+
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.dia {
+    background-color: #1F95D0;
+    color: #fff;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie {
+    background: #F5F5F5;
+    width: 100%;
+    height: 8%;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul li {
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul li span {
+    color: #b9bcc8;
+}
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul li::before {
+    border-radius: 50%;
+    padding: 7px 8px;
+    color: #5093e1;
+    font-size: 12px;
+    border: 1px solid #5093e1;
+    margin-right: 10px;
+}
+/*
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-pie ul li:hover:before {
+    color: white;
+    background: #5093e1;
+    transition: 0.3s;
+}*/
+.festivo{
+    color: white;
+    font-size: 20px;
+    border: blue;
+    background-color: #E75B74;
+}
+
+.color{
+    background: red;
+}
+.contenedor:hover{
+    background: rgba(31,149,208,0.5);
+    //color: #fff;
+}
+.contenedor{
+    position: relative;
+}
+.ventana{
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    left: 0%;
+    position: fixed;
+    kground: rgb(31,149,208);
+    top: 15%;
+    display: none;
+}
+.form{
+    width: 300px;
+    height: 300px;
+    padding: 25px;
+    background: ;
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+.cerrar{
+    color: red;
+    font-weight: 100;
+    text-align: right;
+    color: white;
+}
+#abrir{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    background: none;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+
+}
+.Guardar{
+    color: white;
+}
+#cerrar{
+    text-decoration: none;
+    color:white;
+}
+.cuadrado{
+    background: red;
+}
+.li1{
+    background-color: white;
+}
+.li3{
+    background-color: white;
+}
+
+/*medias querys*/
+/*_____________________________________________________________________________________________________*/
+/*_____________________________________________________________________________________________________*/
+@media(max-width: 1366px){
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: none;
+    }
+}
+
+/*@media (max-width: 380px){
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo {
+width: 33.3%;
+display: none;
+}
+
+}*/
+/* media query para pantalla de pc */
+@media (min-width: 721px){
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+        width: 14.1%;
+        height: 96px;
+        border-bottom: 1px solid #eceded;;
+        border-right: 1px solid #eceded;;
+        display: flex;
+    }
+}
+/*patallas hd*/
+@media (min-width: 1025px){
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: none;
+    }
+
+
+}
+@media(max-width: 639px) {
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+        width: 14%;
+        height: 66px;
+        border-bottom: 1px solid #eceded;;
+        border-right: 1px solid #eceded;;
+        display: flex;
+        //background: black;
+        flex-direction: column;
+    }
+    .controlT{
+      padding-left: 13px;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias {
+        width: 100%;
+        height: 82%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: none;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: block;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul li {
+        width: 13.3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/*dispositivos pequeños*/
+@media(max-width: 480px) {
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+        width: 14%;
+        height: 60px;
+        border-bottom: 1px solid #eceded;;
+        border-right: 1px solid #eceded;;
+        display: flex;
+        //background: yellow;
+    }
+    .controlT{
+      padding-left: 0px;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias {
+        width: 100%;
+        height: 82%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: none;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: block;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul li {
+        width: 14.3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/*@media (max-width: 380px){
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo {
+width: 33.3%;
+display: none;
+}
+
+}*/
+/* media query para pantalla de pc */
+@media (min-width: 721px){
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+        width: 14.1%;
+        height: 96px;
+        border-bottom: 1px solid #eceded;;
+        border-right: 1px solid #eceded;;
+        display: flex;
+    }
+}
+/*patallas hd*/
+@media (min-width: 1025px){
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: none;
+    }
+
+
+}
+@media screen and (min-width: 640px) and (max-width: 767px) {
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+        width: 14%;
+        height: 66px;
+        border-bottom: 1px solid #eceded;;
+        border-right: 1px solid #eceded;;
+        display: flex;
+        flex-direction: column;
+    }
+    .controlT{
+      padding-left: 20px;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias {
+        width: 100%;
+        height: 82%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: none;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: block;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 ul li {
+        width: 14.3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/*@media (max-width: 380px){
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo {
+width: 33.3%;
+display: none;
+}
+
+}*/
+/* media query para pantalla de pc */
+@media (min-width: 721px){
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias div.calendario-dias {
+        width: 14.1%;
+        height: 96px;
+        border-bottom: 1px solid #eceded;
+        border-right: 1px solid #eceded;
+        display: flex;
+        border-color: rgba(10, 13, 25, 0.12);
+        justify-content: space-between;
+    }
+    .controlT{
+      padding-bottom: 30px;
+      padding-left: 20px;
+    }
+}
+/*patallas hd*/
+@media (min-width: 1025px){
+    section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-titulo2 {
+        width: 100%;
+        height: 10%;
+        background: white;
+        border-bottom: 1px solid #eceded;
+        color: #b9bcc8;
+        font-weight: bold;
+        display: none;
+    }
+
+}
+
+
+section.calendario div.contenido-calendario div.encabezado-calendario div.encabezado-titulo2 p {
+    margin: 10px 0 0 15px;
+    color: #b9bcc8;
+    font-size: 16px;
+    display: none;
+}
+
+
+}
+
+.encabezado-nuevo{
+    padding-top: 10px !important;
+    padding-left: 50px !important;
+    position: relative;
+    visibility: hidden;
+}
+
+
+/*---------------------------------------------------------------------------*/
+/*@media (max-width: 720px){
+.calendario-dias{
+width:10.5%;
+
+}*/
+
+section.calendario div.contenido-calendario div.cuerpo-calendario div.cuerpo-dias {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+}

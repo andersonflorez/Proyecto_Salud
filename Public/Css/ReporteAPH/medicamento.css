@@ -1,0 +1,108 @@
+body{
+  overflow-x: hidden;
+}
+.cont_add_medicamento{
+  padding: 10px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+  height: 91vh;
+
+}
+
+.cont_list_medicamento{
+  overflow-y: auto;
+  display: block;
+  height: 72vh;
+}
+
+.kit{
+  height: 72vh;
+  overflow-y: auto;
+}
+.left_medicamento{
+  overflow-y: auto;
+  height: 91vh;
+}
+.centrar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.medicamento_left{
+  cursor: pointer;
+}
+
+.btn_ajustar{
+  width: 100%;
+}
+
+.position{
+  max-width: 47%;
+}
+@media (max-width: 1024px) {
+  .position{
+    max-width: 100%;
+  }
+}
+
+.formulario_descripcion_medicamento{
+  overflow-y: auto;
+  padding: 10px;
+  right: -408px;
+  width: 407px;
+  height: 92.4vh;
+  position: fixed;
+  z-index: 100;
+  background: #F5F5F5;
+  bottom: 0px;
+  box-shadow: 0 10px 20px rgba(43,59,93,0.29);
+  border: solid 1px rgba(44,53,58,0.1);
+
+}
+
+.titulo_panel_medicamento{
+  color: #1F95D5 !important;
+}
+
+.add_medicamento_btn{
+  height: 33px;
+}
+
+.medicamento_des{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 69.8px;
+}
+.ver_medicamento{
+  margin-top: 60px !important;
+  font-size: 27px;
+  margin-right: -18px;
+  margin-left: 79px;
+}
+
+.cont_add_medicamento h2{
+  color: rgba(0,0,0,0.3);
+}
+
+.panel_medicamento{
+  height: 122px;
+}
+
+
+.close_medicamento{
+  margin-top: 9px;
+  cursor: pointer;
+  float: right;
+  right: 27px;
+  color: rgba(0,0,0,0.4);
+}
+
+.formulario_descripcion_medicamento i{
+  font-size: 20px;
+}
+@media (max-width: 440px) {
+  .formulario_descripcion_medicamento{
+    width: 100%;
+  }
+}

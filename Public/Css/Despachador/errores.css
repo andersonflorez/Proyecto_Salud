@@ -1,0 +1,12 @@
+	.mensajeError{
+		border: 1px solid red;
+		-webkit-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		transition: all .5s ease;
+	}
+	.mensajeValido{
+		border: 1px solid green;
+		-webkit-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		transition: all .5s ease;
+	}

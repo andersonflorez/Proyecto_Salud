@@ -1,0 +1,85 @@
+/* VARIABLES BASICAS */
+
+// Configuración de fuente
+
+/*
+* Variable $unit:
+* Define un espacio predeterminado para conservar uniformidad en la aplicación
+* el cual corresponde a 16px (Tamaño de la letra 'M' mayúscula (font-size))
+*/
+$unit: 1em;
+
+/*Tamaños generales de fuente*/
+$font-size: 12px;
+$font-size-lg: $unit * 1.5 ;                     // Tamaño Grande
+$font-size-md: $unit;                            // Tamaño Mediano
+$font-size-sm: $unit * 0.5;                      // Tamaño Pequeño
+
+
+//  COLORES:
+$background:#f5f5f5;
+$negro:#222B2F;
+$negro-claro:#2C353A;
+$blanco: #ffffff;
+$blanco-claro:#EDF1F2;
+$agua-marina:#00A8A7;
+$gris:#677075;
+$gris-oscuro:#515554;
+$azul-oscuro:#3566AE;
+$azul-claro:#4EC3F4;
+$amarillo:#FEB048;
+$rojo:#CB3149;
+$rosado:#E54A65;
+$azul-barra:#1F95D0;
+$gris-submenu:#F0F1F3;
+
+// Colores botones
+$color-rojo: rgba(229, 74, 101, .9);
+$color-verde: #2ecc71;
+$color-naranja: rgba(229,152,42,.89);
+
+
+/*Medidas para utilizar los @media queries*/
+$breakpoints: (
+movil  : 480px,
+tablet : 768px,
+web    : 1367px,
+hd     : 1600px
+);
+
+/*Nuevas medidas (mucho más especificas)*/
+$specific_breakpoints: (
+n:  0,
+xs: 20em,
+sm: 34.375em,
+md: 48em,
+lg: 64em,
+xl: 78.5em,
+xxl: 100em
+);
+
+
+/*Variables del body*/
+$body-font-family: Ubuntu, "Segoe UI", sans-serif;    // Fuente del body
+$body-fondo:$background;                    // background del body
+$body-color:$negro;                         // Color de fuente del body
+$link-color:$azul-barra;                   // Color de los links
+
+
+/*Variables del Header*/
+$header-font-family: Ubuntu, "segoe ui",sans-serif;  // Fuente del Header
+$header-font-weight:normal;                 // Grosor de la fuente del Header
+$header-text-transform:normal;              // Fuente del Header
+$header-color:$blanco;                      // Color de fuente del Header
+
+
+/*Tamaños de etiquetas de encabezado*/
+$h1-font-size:3em;
+$h2-font-size:2.5em;
+$h3-font-size:2em;
+$h4-font-size:1.5em;
+$h5-font-size:1.2em;
+$h6-font-size:1em;
+
+// Line height:
+$line_height: 1.1rem;

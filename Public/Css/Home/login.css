@@ -1,0 +1,224 @@
+body{
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+#frmLogin{
+  padding: 3em;
+  padding-top: 0em;
+  height: 53%;
+}
+
+#frmLogin .frmCont label{
+  color:rgb(158, 175, 184);
+  font-size: 1.2em;
+}
+
+#frmLogin .frmCont .frmInput input{
+  padding: 6px;
+  width: 100%;
+}
+
+#frmLogin .frmCont .frmInput .frm_mensajeVal span {
+  color: #fff;
+}
+
+#home .complement{
+  padding: 2em;
+  padding-bottom: 0em;
+  color: #fff;
+}
+
+#home .complement img{
+  height: 70px;
+  margin-left: -30px;
+}
+
+#home{
+  height: 100% !important;
+}
+
+div.login_section{
+  width: 400px;
+  flex-shrink: 0;
+  box-shadow: -1px 1px 15px rgba(0,0,0,.1);
+}
+
+@media screen and (max-width: 1100px) {
+  #home .title_container .title{
+    padding: 0em 1em !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .mitad_2{
+    background: #fff;
+    background-image: none;
+  }
+
+  }
+
+@media screen and (max-width: 805px) {
+  #home div.login_section {
+    width: 100%;
+  }
+  #home div.logotipo_cad{
+    display: none;
+  }
+    
+}
+
+section#home{
+  /*background-image: none;*/
+  /*background: rgba(255,255,255,1);*/
+  flex-wrap: nowrap;
+}
+
+.panel-login{
+  height: 500px;
+  background: #0196D3;
+  -webkit-box-shadow: 1px 3px 24px 1px rgba(0,0,0,0.47);
+  -moz-box-shadow: 1px 3px 24px 1px rgba(0,0,0,0.47);
+  box-shadow: 1px 3px 24px 1px rgba(0,0,0,0.47);
+}
+
+.form-login{
+  background: #FFF;
+  height: 100%;
+  padding: 0px 20px 0px 20px;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.panel-info{
+  background: url('../../Img/Todos/Login.jpg') no-repeat;
+  background-size: cover;
+  background: (255,0,0,6);
+}
+
+.btn-block{
+  width: 100%;
+}
+
+.btn-verde{
+  background-color: #2ECC71;
+  color: #FFF;
+}
+
+.btn-naranja{
+  background-color: #0181B5;
+  color: #FFF;
+}
+
+.esp-form{
+  margin-bottom: 10px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.titulo-log{
+  color: #666666;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.text-olv-cont{
+  color: #666666;
+}
+
+.logo{
+  width: 90px;
+  text-align: center;
+}
+
+.reg{
+  margin-top: 13px;
+}
+
+hr.separator{
+  border: solid 0.5px #00A8A7;
+  width: 200px;
+  margin-bottom: 2em;
+}
+
+.title{
+  color: #fff;
+}
+
+.mitad_1{
+  background-color: #1B84B8;
+}
+
+.mitad_2{
+  font-family: Ubuntu,"segoe ui",sans-serif;
+  background: #fff;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.text{
+  width: 100%;
+  margin: 0;
+}
+
+.mitad_2 h2{
+    font-family: Ubuntu,"segoe ui",sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    margin-bottom: 1em;
+}
+
+.cont_bola_sep{
+  width: 100%;
+  height: 1px;
+  box-sizing: border-box;
+}
+
+.border_bola{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  position: relative;
+  top: -41px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 100;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bola_separacion{
+  background: #1B84B8;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bola_separacion i{
+  color: #fff;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 768px){
+  .sm_flex_none{
+    display: none;
+  }
+
+  .icon-sign{
+    font-size: 50px;
+    color: #666666;
+  }
+}

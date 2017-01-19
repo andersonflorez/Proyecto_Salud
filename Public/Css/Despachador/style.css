@@ -1,0 +1,249 @@
+#txtDireccion{
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.75);
+  position: absolute;
+  width: 60%;
+  margin-left: -28%;
+  margin-top: 2%;
+  border-radius: 4px;
+  border: 6px solid rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.informacion {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  text-align: center;
+  background-position: 15px 50%; /* x-pos y-pos */
+  padding: 5px 20px 5px 45px;
+  color:rgba(0,0,0,0.5);
+
+}
+
+ul.list_panel li.list_item{
+  width: 342px !important;
+}
+
+.barraBusqueda{
+  display: flex;
+  width: 25%;
+  float: right;
+  margin-right: 2em;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: solid 1px rgba(0,0,0,.15);
+  padding:0 0.5em;
+  border-radius: 3px;
+  transition: all ease 0.4s;
+}
+
+.barraBusqueda:hover{
+  border: solid 1px #18B9E3;
+}
+
+.barraBusqueda span{
+  cursor: pointer;
+}
+
+.barraBusqueda input{
+  width: 92%;
+  border: none;
+}
+
+
+
+.limitar{
+  height: 700px;
+  overflow-y: auto;
+}
+
+.mitad{
+  width: 100% !important;
+}
+.ancho{
+  width: 100% !important;
+}
+
+.dividir {
+  width: auto;
+  height: auto;
+  float: right;
+}
+.separacion {
+  padding-top: 70px;
+}
+#cr-izquierda {
+  margin-left: 20px;
+}
+.despacho {
+  border-radius: .5em solid #eee;
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+  float: left;
+  margin-right: 5%;
+  margin-left: 3%;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+.cabeza {
+  width: 100%;
+  height: 20%;
+  background: #efefef;
+}
+.cuerpo {
+  width: 100%;
+  height: 60%;
+}
+.pies {
+  background: #efefef;
+  font-size: 0.9em;
+  width: 100%;
+  height: 20%;
+}
+.derecha {
+  width: 50%;
+  float: right;
+  height: 100%;
+  text-align: center;
+  margin-top: -6%;
+}
+.izquierda {
+  width: 50%;
+  float: left;
+  height: 100%;
+  text-align: center;
+  margin-top: -6%;
+}
+.cont {
+  margin-top: 5px;
+  width: 80%;
+  height: 95%;
+}
+.panel {
+  text-align: center;
+}
+.p {
+  width: 100%;
+  height: 100%;
+}
+input[type="checkbox"] {
+  font-size: 30px;
+  border: 1px solid blue;
+}
+.md-botones {
+  width: 100%;
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.md-contenido {
+  line-height: 3em;
+}
+.btn-modificar {
+  width: 100%;
+}
+.btn-registrar {
+  width: 100%;
+}
+#btn {
+  width: 70%;
+}
+#button {
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+#mg {
+  margin-top: 15px;
+}
+.cont-rdo, .cont-checbox {
+  width: 50%;
+}
+.cont-antecedente .cont-radio input[type=radio] {
+  border: 1px solid #18b9e3;
+  transition: all ease 0.4s;
+}
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+.radio label, .checkbox label {
+  border-radius: 1px;
+  border: solid 1px #18b9e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em 0;
+  width: 60px;
+  transition: all ease 0.4s;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.checkbox label {
+  margin-bottom: 10px;
+}
+.checkbox label:before {
+  border-radius: 3px;
+}
+input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+  color: #f3f3f3;
+  background: #18b9e3;
+  text-align: center;
+}
+label.rdo-redondo {
+  border-radius: 50%;
+  width: 20px;
+}
+input[type=radio] + label.rdo-redondo:before {
+  content: "";
+  position: relative;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0);
+}
+input[type=radio]:checked + label.rdo-redondo:before {
+  content: "";
+  position: relative;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s;
+}
+.cont-checbox {
+  width: 40%;
+  justify-content: space-between;
+  display: flex;
+}
+.rdo {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+.alinear {
+  padding-top: 1em;
+  box-sizing: border-box;
+}
+.flex {
+  padding-top: 0.35em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.modificarDiv {
+  width: 50%;
+}
+.flex .cont-checkbox .checkbox label {
+  height: 33px;
+  margin: 0;
+}
+.tabla {
+  width: 100%;
+  height: auto;
+  align-items: center;
+}

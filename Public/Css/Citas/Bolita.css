@@ -1,0 +1,45 @@
+#AggPaciente{
+	bottom: 0;
+	top: 0;
+	right: 3em;
+	margin-right: 28px;
+	margin-top: 10px;
+}
+		.AggPaciente {
+			margin-right: 8px;
+			height: 43px;
+			width: 43px;
+		  background:#1f95d0 ;
+		  color:#fff ;
+			display:-webkit-flex;
+			display:-ms-flexbox;
+			display:flex;
+			-webkit-justify-content:center;
+			-ms-flex-pack:center;
+			justify-content:center;
+			-webkit-align-items:center;
+			-ms-flex-align:center;
+			align-items:center;
+			padding:0.5em;
+			font-size:24px;
+			box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+			transition:all ease 0.5s;
+			border-radius:50%;
+			cursor:pointer;
+			float:right;
+			z-index:1000
+			}
+
+		}
+		.AggPaciente  {
+			z-index:1000
+			}
+
+#AggPaciente:hover{
+color:#fff;
+}
+
+.AggPaciente:hover{
+background:#fff;;
+color:rgba(0,0,0,0.7);
+}

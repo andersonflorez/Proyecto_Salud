@@ -1,0 +1,368 @@
+
+@import "../../base/_variables.scss";
+@import "../../base/_funciones.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato|Roboto|Oswald|Satisfy);
+
+@include overwrite-fila {
+  justify-content: center;
+}
+
+
+body {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+}
+
+select#selectDextrosa{
+  border: solid 2px #e5e5e5;
+}
+
+
+.panel-cabecera {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel-contenido {
+  padding: 0;
+}
+.separar_per{
+    margin-bottom: 40px;
+
+}
+.add_desfibrilacion{
+  width: 100%;
+}
+.listar_descripcion{
+  overflow-y: auto;
+  padding: 20px;
+  width: 400px;
+  height: 92vh;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background: #fff;
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.2);
+}
+
+.no-pad {
+  padding: 0 !important;
+}
+
+.pad-r-05 {
+  padding-right: 0.5em;
+}
+
+.pad-l-05 {
+  padding-left: 0.5em;
+}
+
+.pad-05 {
+  padding: 0.5em !important;
+}
+
+.pad-1 {
+  width: 100%;
+  padding: 0.5em;
+  padding-bottom: 1em;
+}
+
+
+
+.aguaM {
+  background: #00a8a7;
+  color: white;
+}
+
+.color-aguaM {
+  color: #00a8a7;
+}
+
+.col-ex {
+  margin: 0.5em;
+}
+
+.col-ex .contenido {
+  padding: 0.2em !important;
+}
+
+.col-ex .panel-contenido {
+  padding: 0.6em;
+  box-sizing: border-box;
+}
+
+.col-ex .cont-rdo {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.col-ex .cont-rdo label {
+  margin: 0;
+}
+
+.col-ex .cont-rdo .rdo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.2em;
+}
+
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+.cont-checbox, .cont-dilatacion {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cont-checbox div, .cont-dilatacion div {
+  width: auto;
+}
+
+.cont-checbox .checkbox, .cont-dilatacion .checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cont-checbox .checkbox label, .cont-dilatacion .checkbox label {
+  width: 30px;
+}
+
+.enviarAutorizacion {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn-enviarAutorizacion {
+  width: 80%;
+}
+
+.desfibrilacion {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+.eliminar_desfibrilacion{
+  color: rgba(0,0,0,0.3);
+  cursor: pointer;
+  margin-top: -50px;
+}
+.btn_eliminar_des{
+  border: none;
+background: none;
+margin-top: -55px;
+}
+.texareaAutorizacion {
+  margin: 10px 0;
+}
+
+.usuario-autorizacion {
+  color: #fff;
+  background: #1F95D0;
+  font-size: 30px;
+  padding: 20px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.autorizacion {
+  box-shadow: 0 0 0 1px #ccc;
+  margin: 10px 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.autorizacion-texto, .autorizacion-titulo {
+  text-align: center;
+}
+
+.autorizacion-titulo {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.btn-aprobar-rechazar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.btn-aprobar-rechazar > button {
+  margin: 15px 10px;
+}
+
+.col-centro {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.estado-autorizacion {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ccc;
+}
+
+.estado-autorizacion p {
+  margin: 0 10px;
+}
+
+.enviado {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.enviado p {
+  font-size: 16px;
+  color: #1F95D0;
+  margin: 0 15px;
+}
+
+.rechazado {
+  color: rgba(229, 74, 101, 0.9);
+}
+
+.aprobado {
+  color: rgba(57, 194, 52, 0.89);
+}
+
+.sin-evaluar {
+  color: #1F95D0;
+}
+
+.ocultar {
+  overflow: hidden;
+}
+
+.top-panel{
+  margin-top: 70px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .btn-enviarAutorizacion {
+    margin-top: 10px;
+  }
+
+  .top-panel-tratamiento{
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .btn-aprobar-rechazar > button {
+    margin: 15px 5px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .btn-aprobar-rechazar > button {
+    margin: 15px 0 15px 2px;
+  }
+}

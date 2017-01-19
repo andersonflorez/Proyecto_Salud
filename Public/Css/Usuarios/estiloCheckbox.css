@@ -1,0 +1,63 @@
+input[type=radio], input[type=checkbox] {
+  display:none;
+}
+.radio label, .checkbox label {
+  border-radius:1px;
+  border:solid 1px #18b9e3;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-justify-content:center;
+  -ms-flex-pack:center;
+  justify-content:center;
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center;
+  padding:0.3em 0;
+  width:100%;
+  transition:all ease 0.4s;
+  cursor:pointer;
+  margin-right:5px;
+}
+.checkbox label {
+  margin-bottom:10px;
+}
+.checkbox label:before {
+  border-radius:3px;
+}
+input[type=radio]:checked+label, input[type=checkbox]:checked+label {
+  color:#f3f3f3;
+  background:#18b9e3;
+  text-align:center;
+}
+input[type=radio]+label.rdo-redondo:before, input[type=checkbox]:checked+label.check-rdo:before {
+  content:"";
+  position:relative;
+  border-radius:50%;
+  width:10px;
+  height:10px;
+  background:rgba(255, 255, 255, 0);
+}
+input[type=radio]:checked+label.rdo-redondo:before, input[type=checkbox]:checked+label.check-rdo:before {
+  content:"";
+  position:relative;
+  border-radius:50%;
+  width:10px;
+  height:10px;
+  background:rgba(255, 255, 255, 0.75);
+  transition:all 0.2s;
+}
+input[type=radio], input[type=checkbox] {
+  display:none;
+}
+
+.btn-registrar[disabled=disabled]
+{
+	background: #2ecc71;
+}
+
+.btn-modificar[disabled=disabled]
+{
+	background:rgba(229,152,42,0.89);
+}
+

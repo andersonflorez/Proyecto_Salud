@@ -1,0 +1,43 @@
+Para cargar un modelo se debe llamar a la función loadModel()
+que tienen todos los controladores.
+
+La función 'loadModel' requiere de dos parámetros:
+ - Nombre del modulo (Por ejemplo: 'HistoriaclinicaDMC', 'Stock' o 'Usuarios'),
+ este debe estar dentro de la carpeta 'Application/Model'
+ 
+ - Nombre del modelo (Por ejemplo: 'ModelUsuarios', 'ModelPacientes' o 'ModelStock'),
+ este es el modelo .php que debe estar dentro del modulo que especificamos antes.
+
+También devuelve una instancia del modelo, lista para acceder a sus metodos.
+
+El siguiente ejemplo ilustra un controlador cargando su modelo correspondiente:
+
+<?php
+class ControlAlgunControlador extends Controller implements iController {
+
+  private $instanciaModelo; // Declaración privada de la instancia del modelo
+
+  // Cargamos el modelo en el constructor de la clase:
+  public function __construct() {
+    $this->instanciaModelo = $this->loadModel('NombreModulo', 'ModelAlgunModelo');
+    // 'ModelAlgunModelo' debe estar dentro de la carpeta 'NombreModulo'
+    // 'NombreModulo' debe estar dentro de 'Application/Model/'
+  }
+
+  // Index() para mostrar una vista cualquiera:
+  public function Index() {
+    require APP . 'View/_layout/header.php';
+    require APP . 'View/Módulo/ViewAlgunaVista.php';
+    require APP . 'View/_layout/footer.php';
+  }
+
+  // La siguiente función utiliza la instancia del modelo:
+  public function HacerAlgo() {
+    $resultadoConsulta = $this->instanciaModelo->ConsultarAlgoEnBaseDeDatos();
+    // Nótese que 'ConsultarAlgoEnBaseDeDatos()' es una función que debe
+    // estar definida en el modelo que hemos cargado, en este caso
+    // dicho modelo es 'ModelAlgunModelo', que fue cargado en el constructor
+  }
+
+}
+?>

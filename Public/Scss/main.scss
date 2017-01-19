@@ -1,0 +1,30 @@
+/*
+APH
+Versión:0.0.5
+*/
+
+/* BASE--> Estilos Basicos, variables, mixins, etc  */
+@import "Base/_reset.scss";           //Reseteo del navegador
+@import "Base/_variables.scss";      //Variables de Sass
+@import "Base/_funciones.scss";   //Mixins o funciones de Sass
+@import "Base/_base.scss";         //Estilos Basicos
+@import "Base/_grid.scss";
+
+/* CATEGORIAS--> Los estilos de las etiquetas de html categorizados por (Botones, Secciones, Tipografias, Otros) */
+
+@import "Categorias/_botones.scss";        //Estilos de botones.
+@import "Categorias/_tipografias.scss";  //Tipografias (Iconos y fuentes).
+@import "Categorias/_tablas.scss";     //Estilo para tablas.
+@import "Categorias/_formularios.scss"; //Formularios
+@import "Categorias/_otros.scss";     //Componentes que no estan en las Categorias anteriores.
+@import "Categorias/_paneles.scss";  //Paneles
+@import "Categorias/_maestras.scss";    //Menu
+@import "Categorias/_notificaciones.scss";    //Notificaciones
+@import "Categorias/_general.scss";    //Notificaciones
+@import "Categorias/_modal.scss";    //Modal
+
+
+/* LAYOUTS--> Todos aquellos estilos que se repiten a lo largo del proyecto.  */
+
+@import "Layouts/_footer.scss";  //Pie de pagina
+@import "Layouts/_header.scss"; //Cabecera

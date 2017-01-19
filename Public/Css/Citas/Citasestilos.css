@@ -1,0 +1,222 @@
+
+
+.TwoPoints{
+	padding-left: 5px;
+	padding-right: 3px;
+	color:red;
+}
+.calendario-dias{
+	cursor: pointer;
+}
+.barra-filtro .input-barra>input{
+	border-right: 1px solid rgba(0, 0, 0, 0.14902);
+}
+.panel .panel-cabecera h3{
+	text-align: center;
+}
+li.sgrEnfermeria{
+	margin: 0px !important;
+	border-bottom: 0px !important;
+}
+ul.list_panel li.list_item{
+width: 250px !important;
+max-width: 282px;
+border-radius: 0px;
+}
+.contSuge{
+	cursor:pointer;
+	height: 35px;
+}
+.contSel{
+	background:#1F95D0;
+}
+.addSugerenciasEnf{
+	  border: 0px;
+    position: absolute;
+    bottom: 0px;
+		border-top: 1px solid rgba(0, 0, 0, 0.14902);
+		width: 100%;
+		background: #FFFFFF;
+		height: 31px;
+		z-index: 1;
+}
+.addSugerenciasEnf:hover{
+	background: #F5F5F5;
+}
+.sugerenciaEnfermeria{
+	border-bottom: solid 1px #e5e5e5;
+	border-right: solid 1px #e5e5e5;
+	overflow: hidden;
+	position:relative;
+	max-height: 179px;
+	-webkit-transition: max-height 2s; /* For Safari 3.1 to 6.0 */
+	transition:max-height 2s;
+	display: flex;
+flex-direction: column;
+}
+.despMostrarMas{
+	max-height: 2000px;
+}
+.d1{background-color: black}
+.d2{background-color: yellow}
+.d3{background-color: green}
+.flecha-der, .flecha-izq{
+border: 0px;
+}
+.frmCont{
+	width: 100%; !important;
+}
+
+
+.cont-rdo,.cont-checbox{
+		width: 100%;
+}
+
+.cont-antecedente .cont-radio input[type=radio] {
+ border: 1px solid #18b9e3;
+ transition: all ease 0.4s;
+}
+
+
+input[type=radio],
+input[type=checkbox] {
+ display: none;
+}
+
+.radio label, .checkbox label {
+ border-radius: 1px;
+ border: solid 1px #18b9e3;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 0.3em 0;
+ width: 60px;
+ transition: all ease 0.4s;
+ cursor: pointer;
+ margin-right: 5px;
+}
+
+.checkbox label {
+ margin-bottom: 10px;
+}
+
+.checkbox label:before {
+ border-radius: 3px;
+}
+
+input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+ color: #f3f3f3;
+ background: #18b9e3;
+ text-align: center;
+}
+
+label.rdo-redondo {
+ border-radius: 50%;
+ width: 20px;
+}
+
+input[type=radio] + label.rdo-redondo:before {
+ content: "";
+ position: relative;
+ border-radius: 50%;
+ width: 10px;
+ height: 10px;
+ background: rgba(255, 255, 255, 0);
+}
+
+input[type=radio]:checked + label.rdo-redondo:before {
+ content: "";
+ position: relative;
+ border-radius: 50%;
+ width: 10px;
+ height: 10px;
+ background: rgba(255, 255, 255, 0.75);
+ transition: all 0.2s;
+}
+
+.cont-checbox{
+	 width: 40%;
+	 justify-content: space-between;
+	 display: flex;
+}
+
+.rdo{
+	 width: 100%;
+	 display: flex;
+}
+
+.aggExt{
+	display: flex;
+  padding-left: 16px;
+	padding-right: 16px;
+	color: #2ecc71;
+	cursor: pointer;
+}
+.aggInput{
+	display: none;
+ 	border-right:solid 1px #e5e5e5;
+  border-left:solid 1px #e5e5e5;
+	width: 150px;
+}
+.contSelect{
+	background: rgba(31,149,208,0.5)!important;
+}
+.turnoSel{
+	display: flex;
+	color:black;
+}
+.diasT{
+	padding-left: 5px;
+	padding-top: 5px;
+}
+.controlT{
+	padding-right: 20px;
+	padding-top: 5px;
+}
+.cont-rdo .rdo, .cont-rdo .cont-checbox, .cont_check_rdo .rdo, .cont_check_rdo .cont-checbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em !important;
+  border-bottom: dashed 1px rgba(0, 0, 0, 0.15);
+  margin-top: 0.4em !important;
+  border-radius: 2px;
+}
+.rdo_tabla {
+  padding: 0 !important;
+}
+
+.rdo_tabla label {
+  width: 100%;
+ height: 33px;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.reporteCita{
+padding-bottom: 10px;
+padding-top: 10px;
+}
+.encabezado_informe{
+	padding-bottom: 10px;
+}
+.sub_reporte{
+    text-transform: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #1f95d0;
+    font-weight: normal;
+		padding-bottom: 3px;
+}
+.errorSelected{
+	border: solid 1px #AD0303 !important;
+}
+.divFiltro{
+	width: 100%;
+padding-left: 5%;
+padding-bottom: 5%;
+padding-right: 50%;
+}

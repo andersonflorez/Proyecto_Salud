@@ -1,0 +1,381 @@
+@import url(https://fonts.googleapis.com/css?family=Lato|Roboto|Oswald|Satisfy);
+/*=== Cabecera del documento ===*/
+.PanelE{
+
+
+}
+.panel .panel-cabecera {
+  text-align: center;
+}  
+
+.frm_contenedor{
+  width: 100%;
+}
+
+.container {
+  top: 0px;
+}
+
+header {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0px;
+}
+
+header .bola {
+  width: 60px !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none !important;
+  box-sizing: border-box;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center !important;
+  -webkit-align-items: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+header .logo #logo {
+  color: #ffffff !important;
+  font-size: 35px;
+  font-family: 'Satisfy', cursive;
+  text-transform: none;
+}
+
+/*=== MENÚ EMERGENCIA HC ===*/
+.menu_emergencia span {
+  color: rgba(34, 43, 47, 0.8);
+  margin-left: 1em;
+  -webkit-transition: all ease 0.4s;
+          transition: all ease 0.4s;
+}
+
+.menu_emergencia span:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+/*---------------------------paciente--------------------------------------*/
+
+.calen{
+  background-color: rgba(229, 74, 101, 0.9);
+}
+
+.cont{
+position: relative;
+left: 2.5%;
+}
+.campoco{
+margin-top: 10px;
+}
+.img{
+margin-left: 2%;
+}
+.imagenes1{
+  width: 26% !important;
+  height: 90px !important;
+}
+.separacion{
+      padding-right: 7%;
+
+}
+.pacientes{
+border-radius: .5em solid #ddd;
+  border: 1px solid #ddd;
+  width: 240px;
+  height: 300px;
+margin-bottom: 50px;
+margin-right: auto;
+margin-left: auto;
+  text-align: center;
+
+  font-size: 17px;
+
+}
+.cabeza{
+  border-top: 6px;
+  width: 100%;
+  height: 20%;
+  background-color: #efefef;
+}
+.cuerpo{
+  width: 100%;
+  height: 60%;
+}
+.pies{
+  background-color: #efefef;
+
+  width: 100%;
+  height: 20%;
+}
+#spc{
+  margin-top: 5px;
+}
+.fecha{
+position: relative;
+left: 100px;
+
+}
+/*
+.campo{
+font-size: 16px;
+color: #000;
+width: 100%;
+outline: none;
+padding: 5px;
+border: none;
+border-bottom: 2px solid #eee;
+border-left: 1px solid #eee;
+border-right: 1px solid #eee;
+border-radius: 4px;
+}
+#camporaro{
+font-size: 16px;
+color: #000;
+width: 100%;
+outline: none;
+padding: 5px;
+border: none;
+border-bottom: 2px solid #eee;
+border-left: 1px solid #eee;
+border-right: 1px solid #eee;
+border-radius: 4px;
+}
+*/
+/*.barrita{
+  background: #00A8A7;
+  text-transform: uppercase;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}*/
+/*.Alrededor{
+  background: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+}*/
+
+.radiones{
+position: absolute;
+left: 60px;
+}
+
+
+
+
+.d11{
+background: white;
+
+}
+.d1{
+  background: black;
+}
+
+.d2{
+  background: blue;
+}
+.d3{
+  background: orange;
+}
+
+.d4{
+  background: green;
+}
+.d5{
+  background: yellow;
+}
+.fa-6 {
+    font-size: 10em;
+		overflow:hidden;
+    color: rgba(75, 215, 255, 0.9);
+
+}
+.icono-estilos1{
+    background:  #00A8A5;
+
+border-radius: 5px;
+}
+
+.titulo{
+  font-size: 30px;
+font-family: sans-serif;
+color: #666666;
+
+
+}
+.for1{
+  font-size: 40px;
+font-family: sans-serif;
+color: #666666;
+
+}
+
+
+
+
+.md-modal{
+  text-align: center;
+}
+.center{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px 0;
+}
+
+.amigo{
+  height: 100%;
+  width: 701px;
+
+}
+.contenido{
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+.afiliado-d{
+  display: none;
+}
+.horas-d{
+  display: none;
+  text-align: center;
+}
+.search{
+color: black;
+
+}
+
+
+.bola-citas{
+  background:rgba(255,255,255,.1);
+  width: 40px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.h4-titulo{
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  width: 100%;
+  padding: 0.5em;
+}
+
+/* paginacion mi mujer*/
+
+
+
+.icon-funcion:hover{
+  color: #1F95D0 !important;
+}
+.icon-funcion{
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.bajar{
+  margin-top: 30px;
+}
+#txtMotivoConsulta, #txtProcedimiento, #txtEvolucion, #txtIncapacidad,#txtEnfermedadActual,#txtNotaEnfermeria{
+  resize: none;
+  height: 35px;
+  width: 100%;
+  background-color: #fff;
+}
+
+#txtNotaEnfermeria{
+  height: 200px;
+}
+
+.Center{
+  align-items: center;
+}
+
+.Center input[type="checkbox"]{
+  width: auto;
+  margin: 0 20px 0 20px;
+}
+
+/*Ordenes medicas*/
+.nav{
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 10px;
+
+}
+
+.nav .nav-cont a{
+  color: #777;
+}
+
+.nav-cont{
+  padding: 5px;
+  border: 1px solid #1F95D0;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.nav-item{
+  padding: 10px;
+}
+
+.nav-cont a:hover{
+  text-decoration: overline;
+  color: #1F95D0;
+}
+body{
+overflow: visible;
+
+}.frmCont{
+width: 100%;
+
+}
+
+.rayita > label{
+  padding: 3px 0;
+  margin-bottom: 5px;
+  border-bottom :dotted 1px rgba(0,0,0,.2);
+
+
+}
+
+@media (max-width: 600px) {
+
+
+ul.list_panel li.list_item{
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+}
+
+.img{
+  min-width: 50px;
+}

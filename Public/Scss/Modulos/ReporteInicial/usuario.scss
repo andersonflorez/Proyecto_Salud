@@ -1,0 +1,489 @@
+@import "../../Base/_funciones.scss";
+@import "../../Base/_variables.scss";
+
+.input-barra{
+  border-right: 1px solid rgba(0,0,0,0.2) !important;
+}
+.clean_history{
+  img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1em;
+  }
+  h4{
+    font-size: 1.3em !important;
+  }
+  p{
+    color: #666 !important;
+    text-align: center;
+    padding: 1em 5em;
+  }
+}
+
+.clean_chat{
+  img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1em;
+  }
+}
+
+.clean_noreports{
+  img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1em;
+  }
+  h4{
+    font-size: 1.3em !important;
+  }
+  p{
+    color: #666 !important;
+    text-align: center;
+    padding: 1em 5em;
+  }
+}
+
+.barra-filtro .btn-barra-filtro::after {
+  width: 28px !important;
+}
+
+.barra-filtro .input-barra>input {
+  font-size: 17px !important;
+}
+/*-----------=============== BARRA DE NAVEGACION ==============-----------*/
+
+.notify_container{
+  top: 0 !important;
+}
+nav{
+  background-color: #1F95D0;
+  color: white;
+
+  li{
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 20px;
+  }
+}
+
+.user_nav li:hover{
+  background-color: #359FD5;
+  color: white;
+}
+
+.last_li:hover{
+  border-bottom: none !important;
+}
+
+/*-----------=============== GLOBAL PANEL ==============-----------*/
+
+.global_hide{
+  display: none;
+}
+
+.active_panel{
+  display: flex !important;
+}
+
+.option_user_session{
+  width: 35px;
+  height: 35px;
+  margin-left: -18em;
+  margin-top: -3.3em;
+  margin-bottom: 2em;
+  background-color: white;
+  border-radius: 50%;
+
+  span{
+    color: #1F95D0;
+    font-size: 18px;
+    padding: 10px !important;
+  }
+}
+
+.option_user_edit{
+  width: 35px;
+  height: 35px;
+  margin-top: -3.3em;
+  margin-bottom: 2em;
+  background-color: white;
+  border-radius: 50%;
+
+  span{
+    color: #1F95D0;
+    font-size: 18px;
+    padding: 10px !important;
+  }
+}
+
+/*-----------=============== PANEL HISTORY CHAT ==============-----------*/
+
+.paragraph{
+  text-align: inherit !important;
+}
+
+.display{
+  transition: background-color 0.5s ease;
+
+  .paragraph::after{
+    transition: background-color 0.5s ease;
+
+  }
+
+  .content_list_chat{
+    transition: border-top 0.5s ease;
+  }
+}
+
+.display:hover{
+  background-color: #F3F3F3;
+
+  .paragraph::after {
+    background-color: #F3F3F3;
+  }
+
+  .content_list_chat{
+    box-shadow: none !important;
+  }
+}
+
+.display{
+  width: 100%;
+  height: 75px;
+
+  .cont_inform{
+    padding-top: 0em !important;
+
+    .user_data{
+      padding-bottom: 5px;
+    }
+
+    .user_img{
+      padding-right: 1em;
+
+      .history_user_img{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        z-index: 0;
+      }
+    }
+
+    .content_list_chat{
+      height: 72px;
+      box-shadow: 0px -5px 3px -6px #CCCCCC;
+
+      .chat_time{
+        color: #D3D3D3;
+        font-size: 0.9em;
+      }
+
+      .last_msg{
+        font-size: 14px;
+        color: #9F9C99;
+      }
+
+      .msg_data{
+        height: 32px;
+      }
+    }
+  }
+}
+
+.panel_content_history > a:nth-child(1) > .cont_inform > .content_list_chat {
+  box-shadow: none;
+}
+
+/*-----------=============== PANEL CLEAN HISTORY CHAT ==============-----------*/
+
+.panel_list_chat #panel_content_history_clean h4{
+  color: #1F95D0;
+  text-align: center;
+}
+
+.panel_list_chat #panel_no_reports h4 {
+  color: #1F95D0;
+  text-align: center;
+}
+
+#clear{
+    padding: 0.32em;
+    background-color: #4EC3F4;
+    font-size: 23px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#clear_search div{
+  padding-bottom: 14px;
+  padding-left: 9px;
+  color: #1F95D8;
+}
+
+#clear_search {
+  padding-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+#clear img{
+  width: 32px;
+  height: 32px;
+}
+
+/*-----------=============== PANEL CHAT ==============-----------*/
+
+#dateChat{
+  color: #D3D3D3;
+  font-size: 0.9em;
+}
+
+.chat-header {
+  border-bottom: 1px solid #EBEBEB;
+
+  .cont_aph{
+    width: 100%;
+    padding: 15px 20px;
+
+    .chat-user-img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .inf_aph{
+      padding-left: 21px;
+
+      .line{
+        font-size: 14px;
+      }
+      .icon_line{
+        margin-top: 3px;
+        margin-left: 8px;
+      }
+
+      span{
+        color: #D3D3D3;
+        font-size: 0.9em;
+      }
+
+      p {
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+  .close_history_chat{
+    border-left: 1px solid #EBEBEB;
+    padding: 10px;
+    cursor: pointer;
+
+    .button-user-inf {
+      background: transparent;
+      color: #666666;
+      border: 0px;
+      padding: 10px;
+    }
+  }
+}
+
+.chat-message {
+  background: #F8F8F8;
+  border-top: 2px solid #EDEDED;
+  padding: 14px;
+  height: 50px;
+
+  .send-msg {
+    background: #FFF;
+    border: 1px solid #EAEDF2;
+    border-radius: 6px;
+
+    .button-call {
+      background: transparent;
+      font-size: 18px;
+      border-right: 1px solid #F0F0F0;
+      border-left: 0px;
+      border-top: 0px;
+      border-bottom: 0px;
+      flex-basis: 9%;
+      color: #666666;
+    }
+
+    .button-send {
+      background: transparent;
+      border: 0px;
+      font-size: 16px;
+      color: #666666;
+      padding: 0px;
+      margin-right: 4px;
+    }
+
+    input {
+      flex-basis: 75%;
+      border: 0 none;
+    }
+    // Estilos placeholder
+    input::-webkit-input-placeholder {
+      font-size: 14px;
+    }
+  }
+}
+
+/*-----------=============== PANEL LOAD CHAT ==============-----------*/
+
+.section_load{
+  display: none;
+}
+
+.load {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #1F95D0;
+  border-radius: 50%;
+  border-top: 0;
+  border-left: 0;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 1s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/*-----------=============== PANEL CLEAN CHAT ==============-----------*/
+
+.panel_chat #clean_section h4 {
+  color: #1F95D0;
+  font-size: 1.3em;
+}
+
+.panel_chat #clean_section p {
+  color: #666;
+  text-align: center;
+  padding: 1em 5em;
+}
+
+.emergency, .emergency_disabled {
+  padding: 0.5em;
+  background: #4EC3F4;
+  color: #fff;
+  font-size: 23px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: all ease 0.5s;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.error_button {
+  width: 43px;
+  height: 43px;
+  padding: 0.5em;
+  color: #fff;
+  font-size: 23px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: all ease 0.5s;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.emergency_disabled{
+  box-shadow: none !important;
+  color: #aaa;
+  cursor: auto !important;
+  background: #fafafa;
+  &:hover{
+    background-color: #fafafa !important;
+    color: #aaa !important;
+  }
+}
+
+
+.emergency_label {
+  padding-bottom: 12px;
+  padding-left: 9px;
+  color: #1F95D8;
+}
+
+/*-----------=============== MEDIA QUERIES ==============-----------*/
+
+@media (max-width: 400px){
+
+  .chat_time{
+    display: none;
+  }
+}
+
+@media (min-width: 567px)  and (orientation: landscape){
+  .inf-control{
+    display: none !important;
+  }
+}
+
+@include desde-hasta(550px, 880px){
+  .clean_history{
+    p{
+      padding: 1em;
+    }
+  }
+}
+
+@media (min-width: 730px) {
+
+  .inf-control{
+    display: flex !important;
+  }
+
+  .view_panel{
+    display: flex !important;
+  }
+
+  .panel_chat{
+    display: flex !important;
+    padding-left: 1em;
+  }
+
+  div > li:last-of-type{
+    display: none;
+  }
+
+  .inf-cabecera img{
+    width: 95px;
+    height: 95px;
+    margin: 15px;
+  }
+}
+
+
+@media (min-width: 1255px) {
+
+  .panel_form{
+    display: flex !important;
+  }
+
+  .panel_list_chat{
+    display: flex !important;
+  }
+
+  .nav_bar{
+    display: none;
+  }
+
+  .panel_list_chat{
+    margin-left: 1em;
+  }
+
+}
+
+.connection_error{
+  span{
+    color: #c5485e;
+    &:nth-child(1):hover{
+      background-color: #c5485e;
+      color: #fff;
+    }
+  }
+}

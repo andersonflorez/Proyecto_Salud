@@ -1,0 +1,302 @@
+@import "../../Base/_variables.scss";
+@import "../../Base/_funciones.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato|Roboto|Oswald|Satisfy);
+
+@include overwrite-fila {
+  justify-content: center;
+}
+
+
+
+
+
+body{
+  background: #E6E6E6 !important;
+  font-family: 'Arial';
+
+}
+.h100{
+  height: 100%;
+}
+.respuesta{
+  font-weight:bold !important;
+}
+.no_box{
+  box-shadow: 0 0;
+}
+.panel-consulta{
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  .icon-atras{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0,0,0,.4);
+    font-size: 14px;
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 1000 !important;
+
+  }.icon-atras:active{
+    background: rgba(0,0,0,.06);
+  }
+}
+.contenedor-consulta{
+  position: relative;
+  overflow: hidden;
+}
+.autorizacion{
+  position: relative;
+  .codigoAutorizacion{
+    font-size: 14px;
+    position: absolute;
+    right: 16px;
+    top: -20px;
+    width: 120px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: flex-end;
+    >p{
+      >span{
+        margin-left: 10px;
+      }
+    }
+  }
+  .autorizacion-header{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    max-height: 432px;
+    overflow: auto;
+    @include desde-hasta(0,500px){
+      flex-direction: column;
+      align-items: center;
+
+    }
+    @include desde-hasta(0,tablet){
+      margin-bottom: 20px;
+    }
+    .imagen{
+      width:100px ;
+      height:100px ;
+      min-width: 100px;
+      min-height: 100px;
+      max-width: 160px;
+      max-height: 100px;
+      margin-right: 1em;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .informacion{
+      @include desde-hasta(0,500px){
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .nombre-envia{
+        color: $agua-marina  ;
+        font-family: 'arial';
+        font-weight: bold;
+
+      }
+      p{
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: inherit ;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .sub-inforamacion{
+        margin-top: 10px;
+        font-size: 13px;
+        >p{
+          color: rgba(#000,.5);
+          font-weight: 600;
+          span{
+            font-size: 13px;
+          }:hover{
+            color: rgba(#000,.7);
+            transition: 0.5s all;
+          }
+        }
+      }
+    }
+  }
+  .autorizacion-body{
+    padding: 0 16px;
+    textarea{
+      height: 80px;
+    }
+    .botones{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 30px;
+      button{
+        padding: 13px 0;
+        width: 160px;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: none;
+        border-radius: 2px;
+        font-family: sans-serif !important;
+      }:hover{
+        border: none;
+      }
+    }
+    .botones-consulta{
+      display: flex;
+      justify-content: flex-end;
+      button{
+        padding: 0.6em 0.7em;
+        margin-right: 10px !important;
+        font-weight: bold;
+      }
+
+    }
+  }
+}
+
+.cont_hc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.contenedor_HC{
+  width: 100%;
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 2em 0;
+  padding-right: 2em;
+  box-shadow: 0 1px 2px rgba(43,59,93,.29),
+  0 -1px 0px rgba(43,59,93,.1) ;
+  margin-bottom: 2em;
+
+
+  .informacionBasica{
+    width: 20%;
+    min-width: 150px;
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 2em;
+    padding-left: 0.5em;
+    color: $negro;
+
+  }
+}
+#contenedor-nueva-notificacion{
+  width: 402px;
+  height: auto;
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;;
+  background: rgba(0,0,0,0);
+  max-height: 500px;
+  flex-wrap: wrap;
+  overflow: auto;
+  @include desde-hasta(0,415px){
+    width: 230px;
+    right: 0;
+  }
+
+  .nueva-notificacion{
+    margin: 0 auto;
+    z-index: 5000;
+    margin-top: 20px;
+    transform: scale(1);
+    width: 395px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    @include desde-hasta(0,415px){
+      width: 210px;
+    }
+
+    border-bottom: 2px solid rgba($azul-oscuro,1);
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    .nueva-notificacion-header{
+      height: 70%;
+      width:22%;
+      min-width: 87.5px;
+      min-height: 82.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid rgba(0,0,0,0.2);
+      @include desde-hasta(0,513px){
+        display: none;
+      }
+      >img{
+        width: 75%;
+        height: 90%;
+        border-radius: 50%;
+      }
+
+    }
+    .nueva-notificacion-body{
+      position: relative;
+      color: rgba(0,0,0,.7);
+      padding: 0.5em;
+      box-sizing: border-box;
+      width:78%;
+      height: 100%;
+      @include desde-hasta(0,513px){
+        width: 100%;
+      }
+      >li{
+        cursor: pointer;
+        width: 35px;
+        height: 28px;
+        color: rgba(0,0,0,.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      >h5{
+        cursor: default;
+        color: rgba($azul-oscuro,1);
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+      >span{
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 12px;
+      }
+      div{
+        cursor: pointer;
+        padding-right: 10px;
+        font-size: 13px;
+      }
+
+    }
+  }
+}

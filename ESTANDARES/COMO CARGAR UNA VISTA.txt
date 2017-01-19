@@ -1,0 +1,20 @@
+Para renderizar una vista dentro de un controlador se debe usar el
+método Index() al cual tienen acceso todos los controladores.
+
+Ejemplo de un controlador cargando una vista:
+
+<?php
+class ControlAlgunControlador extends Controller implements iController {
+
+  // Index() para mostrar una vista cualquiera:
+  public function Index() {
+    require APP . 'View/_layout/header.php'; // Obligatorio, esta es la barra de navegación, linkea los css
+    require APP . 'View/Módulo/ViewAlgunaVista.php'; // Aqui va el nombre de tu vista
+    require APP . 'View/_layout/footer.php'; // Obligatorio, esto linkea los javascripts
+  }
+
+}
+?>
+
+NOTA: Revisar el archivo 'COMO LINKEAR CSS - IMG - JS.txt' para
+complementar este ejemplo

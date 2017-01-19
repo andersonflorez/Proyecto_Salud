@@ -1,0 +1,56 @@
+Para anexar cualquier archivo correctamente y sin problemas se debe usar
+la contante URL que contiene la dirección 'http://localhost/PROYECTO_SALUD_DEV/'.
+
+CARGAR IMAGENES DENTRO DE UNA VISTA:
+Ejemplo:
+<img src="<?=URL?>Public/Img/Nombre_carpeta_proceso/archivo.png">
+
+CARGAR HOJAS DE ESTILOS (CSS) Y JAVASCRIPTS:
+Esto se debe realizar en el controlador de la vista, dentro del
+método Index(), cada controlador debe tener dos atributos privados:
+
+private $styles;
+private $scripts;
+
+Estos atributos serán arrays que se encargaran de
+cargar nuestros archivos CSS y Javascripts dentro
+del método Index().
+
+El siguiente ejemplo muestra como se debe hacer:
+
+<?php
+class ControlAlgunControlador extends Controller implements iController {
+
+  // Atributos obligatorios:
+  private $styles;
+  private $scripts;
+
+  // Index() para mostrar una vista cualquiera:
+  public function Index() {
+
+    # NOTA: No es necesario cargar 'JQuery' ni 'main.css', ya vienen cargados por defecto
+
+    // Cargar CSS de 'ViewAlgunaVista.php':
+    $this->styles = array(
+      URL . 'Public/Css/NombreModulo/Estilo1.css',
+      URL . 'Public/Css/NombreModulo/Estilo2.css',
+      URL . 'Public/Css/NombreModulo/Estilo3.css'
+      // Y asi sucesivamente, separando con comas (,) cada estilo.css
+    );
+
+    // Cargar JAVASCRIPTS de 'ViewAlgunaVista.php':
+    $this->scripts = array(
+      URL . 'Public/Js/NombreModulo/Script1.js',
+      URL . 'Public/Js/NombreModulo/Script2.js',
+      URL . 'Public/Js/NombreModulo/Script3.js'
+      // Y asi sucesivamente, separando con comas (,) cada script.js
+    );
+
+    // Luego se debe cargar la vista:
+    require APP . 'View/_layout/header.php'; // Obligatorio, esta es la barra de navegación, linkea los css
+    require APP . 'View/Módulo/ViewAlgunaVista.php'; // Aqui va el nombre de nuestra vista
+    require APP . 'View/_layout/footer.php'; // Obligatorio, esto linkea los javascripts
+  }
+
+}
+?>

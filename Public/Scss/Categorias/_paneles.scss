@@ -1,0 +1,128 @@
+/**
+* Panel de las vistas
+*/
+.panel{
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2);
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  .panel-cabecera{
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: solid rgba($negro , 0.25) 1px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 1px 0px rgba($negro , .1);
+
+    h3{
+      color: #908F8F;
+      text-transform: none;
+      padding:0.7em 1em;
+      font-size: 22px;
+      font-family: sans-serif;
+      color:rgba($azul-barra, 1);
+      font-weight: bold;
+    }
+  }
+
+  .panel-contenido{
+    padding: 1.5em;
+    box-sizing: border-box;
+  }
+
+
+  .panel-pie{
+  }
+
+}
+
+// Bloques de código:
+.code{
+  background-color: #fafbfc;
+  border: 1px solid rgba(0,0,0,.1);
+  border-left: 3px solid rgba(0,0,0,.1);
+  code{
+    color: #555;
+  }
+}
+
+// Panel de listas:
+ul.list_panel{
+  list-style: none;
+
+  li.list_item{
+    margin: .5*$unit;
+    border: 1px solid rgba(0,0,0,.1);
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    min-width: 250px;
+    width: 350px;
+
+    .list_item_header{
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      h5{
+        color: $azul-barra;
+      }
+      .item_icon{
+        background-color: #fafafa;
+        color: #666;
+        border-right: 1px solid rgba(0,0,0,.1);
+        padding-left: 1.2*$unit;
+        padding-right: 1.2*$unit;
+      }
+    }
+
+    .list_item_content{
+      padding: .5*$unit;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      color: #555;
+    }
+
+    .list_item_footer{
+      background-color: #f8f8f8;
+      padding-top: .3*$unit;
+      padding-bottom: .3*$unit;
+      .footer_element{
+        line-height: 2*$unit;
+        color: #666;
+
+        .separate_left{
+          margin-left: $unit;
+        }
+
+        .separate_right{
+          margin-right: $unit;
+        }
+
+        .button{
+          cursor: pointer;
+          &:active{
+            color: #444;
+          }
+        }
+
+        .counter{
+          border: 1px solid rgba(0,0,0,.1);
+          border-radius: 3px;
+          font-size: .8em;
+          background-color: #fff;
+          span{
+            padding-right: 1em;
+            padding-left: .8em;
+            &:nth-child(1){
+              background-color: #eee;
+              padding: .6*$unit;
+              border-right: 1px solid rgba(0,0,0,.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.justify_text{
+  text-align: justify;
+}

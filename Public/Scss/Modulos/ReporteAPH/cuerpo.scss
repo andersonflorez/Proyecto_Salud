@@ -1,0 +1,398 @@
+@import "../../Base/_variables.scss";
+@import "../../Base/_funciones.scss";
+
+body{
+  background-color: #F5F5F5;
+}
+
+.barraFracturasSelect{
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: -2px 2px 1px rgba($negro-claro,.2);
+  transition: all ease 0.5s;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  transition: all ease 0.5s;
+
+  .cont-barraFracturasSelect {
+    width: 98%;
+    display: flex;
+    overflow-x: auto;
+    transition: all ease 0.5s;
+
+    p{
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .fracturaSelect{
+      min-width: 120px;
+      max-height: 35px;
+      background: $azul-barra;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 10%;
+      padding: 0.5em;
+      box-sizing: border-box;
+      border-radius: 3px;
+      color: #fff;
+      margin: 0.5em 0;
+      margin-right: 0.6em;
+      transition: all ease 0.5s;
+      i{
+        transition: all ease 0.5s;
+        cursor: pointer;
+        margin-left:  0.5em;
+      }
+    }
+  }
+
+}
+
+
+#cont_cuerpo{
+  width: 100%;
+  position: relative;
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.lesion{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $azul-barra;
+  position: absolute;
+  cursor: pointer;
+  animation: punto 2s infinite;
+
+  @include hasta(movil) {
+    width: 8px;
+    height: 8px;
+  }
+
+}
+
+@keyframes punto {
+  0%   {
+    background-color: $azul-oscuro;
+  }
+  25%  {
+    background-color: $azul-barra;
+  }
+  50%  {
+    background-color: $azul-oscuro;
+  }
+  100% {
+    background-color: $azul-barra;
+  }
+}
+
+@keyframes localizar {
+  0%   {
+    background-color: #00C853;
+  }
+  25%  {
+    background-color: $color-verde;
+  }
+  50%  {
+    background-color: $color-verde;
+  }
+  100% {
+    background-color: #00C853;
+  }
+}
+
+.align-center{
+  align-items: center;
+}
+
+.cont_menu_bolitas{
+  width: 4em;
+  height: 100%;
+  position: fixed;
+  left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+
+  @include hasta(movil) {
+    left: 5%;
+  }
+}
+
+.menu_bolitas{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  .icono_bola{
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(#000,.2);
+    transition:all ease 0.5s;
+    margin: 0.5em 0;
+    &:hover{
+      background: $azul-barra;
+      color: #eee;
+    }
+  }
+
+  #bola_plus{
+    &::after{
+      content: attr(fracturasSeleccionadas);
+      background: $rosado;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 16px;
+      padding: 0.3em;
+      height: 18px;
+      width: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: -8px;
+
+      @include hasta(movil) {
+        right: -3px;
+        height: 14px;
+        width: 14px;
+      }
+    }
+  }
+}
+
+#cont_lesiones_true{
+  opacity: 1;
+  transition: all ease 0.3s;
+  z-index: 1000;
+}
+
+@include hasta(movil) {
+  .menu_bolitas .icono_bola {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+
+.menu_lesiones{
+  position: fixed;
+  right: -1000px;
+  bottom: 0;
+  z-index: 11000;
+  background: #fafafb;
+  background: rgba(250,250,251,.98);
+  border-left: 1px solid #dadee2;
+  box-shadow: 0 0 4px 1px rgba(0,0,0,.08);
+  width: 35%;
+  height: 100%;
+  color: #78909c;
+  font-family: Helvetica,Arial,sans-serif;
+  transition: all ease 0.4s;
+
+  @include _hasta(xl) {
+    width: 45%;
+  }
+  @include _hasta(lg) {
+    width: 55%;
+  }
+  @include _hasta(md) {
+    width: 70%;
+  }
+  @include _hasta(sm) {
+    width: 100%;
+  }
+
+
+  .head_m_lesiones{
+    z-index: 1100;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.09);
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 48px;
+
+
+    .head_m_title{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      pointer-events: none;
+
+      b{
+        font-size: 17px;
+        line-height: 48px;
+        font-weight: 600;
+        color: #465c66;
+        letter-spacing: .2px;
+        display: inline-block;
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    } // fin head_m_title
+
+
+    .cont_head_m_close{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      float: right;
+      padding-top: 8px;
+      box-sizing: border-box;
+    }
+    .head_m_close {
+      background-image: url('../../Img/ReporteAPH/head_m_close.png');
+      background-size: 13px 13px;
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      opacity: .4;
+      float: right;
+      margin-left: 15px;
+      margin: 0 20px;
+      cursor: pointer;
+      line-height: 3em;
+      transition: all ease 0.5s;
+
+      &:hover{
+        opacity: 1;
+      }
+    } // fin head_m_close
+
+
+
+  } // fin head_m_lesiones
+
+  .head_m_buscar{
+    z-index: 1500;
+    position: relative;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em;
+    box-shadow: 1px 0px 1px 0px rgba(#000 , .3);
+    background: #fff;
+
+    input{
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  }
+
+  .body_m_lesiones{
+    position: absolute;
+    top: 105px;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 4em;
+
+    .item_lesion{
+      padding: 1.5em;
+      text-align: justify;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e7e7e7;
+      cursor: pointer;
+      transition: all ease 0.5s;
+
+
+      &:hover{
+        background: rgba(#78909c, .06);
+      }
+
+
+      .item_codigo{
+        margin-bottom: 0.3em;
+        font-size: 1.03em;
+        span{
+          margin-left: 0.5em;
+          color: $azul-barra;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .item_punto{
+      .btn{
+        margin: 0.2em;
+        margin-top: 1em;
+        width: 38px;
+        height: 38px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item_list_lesiones{
+        overflow: hidden;
+        p{
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          padding: 0.6em 0em;
+          box-sizing: border-box;
+          border-bottom: dashed 1px rgba(#485D67 , .3)
+        }
+      }
+    }
+
+    .lesionActiva{
+      background: rgba($agua-marina, .2) !important;
+      color: #485D67 !important;
+      border-bottom: 1px solid rgba(#485D67, .2);
+    }
+
+    .consultar{
+      cursor: default;
+    }
+
+  }
+
+  .footer_m_lesiones{
+    box-shadow: 0 -1px 2px 0 rgba(0,0,0,.1);
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+
+    div{
+      padding: 0.7em 0;
+    }
+  }
+
+}

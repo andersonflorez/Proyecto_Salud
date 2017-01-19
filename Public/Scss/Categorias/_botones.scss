@@ -1,0 +1,41 @@
+/*BOTONES*/
+.btn{
+  padding: .6em .7em;
+  font: $unit 'Arial';
+  letter-spacing: 1px;
+  border-radius: 3px;
+  border-width: 0px;
+  background: transparent;
+  transition: .1s all ease;
+  color: $blanco;
+}
+.btn-consultar{
+  background: $azul-barra;
+}
+.btn-consultar:active{
+  background: rgba($azul-barra , .7);
+}
+.btn-eliminar{
+  background: $color-rojo;
+}
+.btn-eliminar:active{
+  background: rgba($color-rojo , .7);
+}
+.btn-registrar{
+  background: $color-verde;
+}
+.btn-registrar:active{
+  background: rgba($color-verde , .7);
+}
+.btn-modificar{
+  background: $color-naranja;
+}
+.btn-modificar:active{
+  background: rgba($color-naranja , .7);
+}
+.btn-cancelar{
+  background: $gris-oscuro;
+}
+.btn-cancelar:active{
+  background: rgba($gris-oscuro , .7);
+}

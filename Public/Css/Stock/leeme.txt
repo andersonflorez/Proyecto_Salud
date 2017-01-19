@@ -1,0 +1,3 @@
+Elimina este archivo, en esta carpeta debes compilar los scss de tu proceso
+
+o si prefieres hacer los estilos de tu página con css puro, en esta carpeta debes crear tus archivos

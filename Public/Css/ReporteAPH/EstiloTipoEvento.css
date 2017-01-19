@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* VARIABLES BASICAS */
+/*
+* Variable $unit:
+* Define un espacio predeterminado para conservar uniformidad en la aplicación
+* el cual corresponde a 16px (Tamaño de la letra 'M' mayúscula (font-size))
+*/
+/*Tamaños generales de fuente*/
+/*Medidas para utilizar los @media queries*/
+/*Nuevas medidas (mucho más especificas)*/
+/*Variables del body*/
+/*Variables del Header*/
+/*Tamaños de etiquetas de encabezado*/
+/* MIXINS O FUNCIONES */
+/**
+* Se encarga de crear la estructura de titulos para las tablas responsives
+*/
+.cont-tipoEvento {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all ease 0.4s;
+          transition: all ease 0.4s;
+  border-radius: 2px;
+  padding: 0 1em;
+  padding-top: 0.5em;
+}
+
+.cont-tipoEvento:hover {
+  box-shadow: 0px 1px 0px 0.5px rgba(0, 0, 0, 0.07);
+}
+
+.cont-tipoEvento .titulo-tipoEvento {
+  width: 80%;
+}
+
+.cont-tipoEvento .checkbox {
+  width: 15%;
+}
+
+.ajustar {
+  padding: 0.5px !important;
+}
+
+.checkTipoEvento {
+  border: 1px solid #AD0303 !important;
+}
+
+.ajustarPanel {
+  max-height: 450px !important;
+  overflow-y: auto;
+}
+
+#contPaciente {
+  height: 610px !important;
+  overflow: auto;
+}
+
+.ajustarRd {
+  margin-top: 1em !important;
+}
+
+#rojo {
+  color: red;
+  padding-left: 5px;
+  padding-right: 3px;
+}
+
+.aggExt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #2ecc71;
+  cursor: pointer;
+}
+
+.aggInput {
+  display: none;
+  border-right: solid 1px #e5e5e5;
+  border-left: solid 1px #e5e5e5;
+  width: 150px;
+}

@@ -1,0 +1,41 @@
+$(document).ready(function() {
+$(".icono-llamada").click(function(){
+  $("#pintarMapa").animate({
+    "width":"65%"
+  })
+  $("#menuInfoReportes").animate({
+    "right":"0"
+  })
+})
+$("#MostrarMenuN").click(function(){
+  $("#pintarMapa").animate({
+    "width":"100%"
+  })
+  $("#menuInfoReportes").animate({
+    "right":"-10000"
+  })
+
+})
+$("#RB_Inicial").css("background","#1F95D0");
+$("#RB_Inicial").css("color","#fff");
+$("#RB_Inicial").click(function(){
+  $("#RB_Despacho").css("background","none");
+  $("#RB_Despacho").css("color","#000");
+  $(this).css("background","#1F95D0");
+  $(this).css("color","#fff");
+  $("#contenidoReporteDespacho").hide();
+  $("#contenidoReporteI").show();
+  $("#TituloDespacho").hide();
+  $("#TituloReporteInicial").show();
+})
+$("#RB_Despacho").click(function(){
+  $("#RB_Inicial").css("background","none");
+  $("#RB_Inicial").css("color","#000");
+  $(this).css("background","#1F95D0");
+  $(this).css("color","#fff");
+  $("#contenidoReporteDespacho").show();
+  $("#contenidoReporteI").hide();
+  $("#TituloDespacho").show();
+  $("#TituloReporteInicial").hide();
+})
+});

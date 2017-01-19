@@ -1,0 +1,121 @@
+.tituloPrincipal {
+  width: 100%;
+  background: #EFEFEF;
+  display: flex;
+  justify-content: center;
+  color: #030303;
+  height: 40px;
+  margin: 20px 1em;
+}
+
+.no_visible {
+  display: none !important;
+}
+
+.motivoConsultaRadio{
+  padding: 1.2em;
+    margin: 0;
+}
+.inputMotivoConsultaRadio{
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.cont_input_buscar1{
+  padding-bottom: 1px !important;
+
+}
+
+.checkTipoEvento {
+  border: 1px solid #AD0303 !important;
+}
+
+.add_other {
+  position: absolute;
+  right: 90px;
+  cursor: pointer;
+}
+
+.add_other_1 {
+  float: right;
+  cursor: pointer;
+}
+
+.cont_input_buscar {
+  width: 100%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.max-contenido {
+  max-height: 70vh;
+}
+
+.cont_radios_separado {
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.acc_transito {
+  max-height: 249px;
+  overflow-y: auto;
+}
+
+.input_buscar {
+  font-family: Arial, FontAwesome;
+}
+
+@media screen and (max-width: 768px) {
+  .tituloPrincipal {
+    margin: 20px 0.2em;
+  }
+}
+
+.urMedica, .urTraumatica {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 884px) {
+  #urgenciaMedicaCorrer {
+    flex: 100%;
+  }
+}
+
+.subtitulo {
+  width: 100%;
+  background: #EFEFEF;
+  display: flex;
+  justify-content: center;
+  color: #030303;
+  height: 45px;
+  margin-bottom: 6px;
+}
+
+.caja {
+  border: 1px solid #EDF1F2;
+  border-bottom: 0px;
+  border-top: 0px;
+}
+
+.tipoAseguRadios div {
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hc {
+  padding: 0% 1%;
+}
+
+input {
+  width: 100% !important;
+}
+
+.input {
+  border: 1px solid #000000;
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+  background-color: transparent;
+}

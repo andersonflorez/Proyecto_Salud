@@ -1,0 +1,51 @@
+/**
+* Genral Tablas
+*/
+table.tbl_responsive,
+table.tbl_scroll {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  transition: all ease 0.5s;
+
+  tbody tr{
+    transition: all ease 0.5s;
+    &:nth-child(odd){
+        background: #fafbfc ;
+    }
+  }
+}
+.tbl_responsive th,
+.tbl_scroll th {
+  text-align: center;
+  text-transform: capitalize;
+  font: 1em 'Arial';
+  font-weight: bold;
+  color: $agua-marina;
+  min-width: 40px;
+  overflow: hidden;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+}
+
+.tbl_responsive td,
+.tbl_scroll td {
+  border: 1px solid #ddd;
+  font-size: .95em;
+  color: #666;
+  padding: 4px;
+  text-align: center;
+  padding: 8px 10px;
+}
+
+.tbl_container {
+  width: 100%;
+  overflow: auto;
+}
+.tbl_container table.tbl_scroll {
+  width: auto;
+  min-width: 100%
+}
+.tbl_scroll th,
+.tbl_scroll td {
+  white-space: nowrap;
+}

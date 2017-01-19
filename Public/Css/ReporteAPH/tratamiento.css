@@ -1,0 +1,532 @@
+@charset "UTF-8";
+/* VARIABLES BASICAS */
+/*
+* Variable $unit:
+* Define un espacio predeterminado para conservar uniformidad en la aplicación
+* el cual corresponde a 16px (Tamaño de la letra 'M' mayúscula (font-size))
+*/
+/*Tamaños generales de fuente*/
+/*Medidas para utilizar los @media queries*/
+/*Nuevas medidas (mucho más especificas)*/
+/*Variables del body*/
+/*Variables del Header*/
+/*Tamaños de etiquetas de encabezado*/
+/* MIXINS O FUNCIONES */
+/**
+* Se encarga de crear la estructura de titulos para las tablas responsives
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato|Roboto|Oswald|Satisfy);
+[class^="fila"] {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+select#selectDextrosa {
+  border: solid 2px #e5e5e5;
+}
+
+.panel-cabecera {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.panel-contenido {
+  padding: 0;
+}
+
+.separar_per {
+  margin-bottom: 40px;
+}
+
+.add_desfibrilacion {
+  width: 100%;
+}
+
+.listar_descripcion {
+  overflow-y: auto;
+  padding: 20px;
+  width: 400px;
+  height: 92vh;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background: #fff;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.panel-consulta .icon-atras:active {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.contenedor-consulta {
+  position: relative;
+  overflow: hidden;
+}
+
+.autorizacion {
+  position: relative;
+}
+
+.autorizacion .codigoAutorizacion {
+  font-size: 14px;
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 120px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.autorizacion .codigoAutorizacion > p > span {
+  margin-left: 10px;
+}
+
+.autorizacion .autorizacion-header {
+  width: 100%;
+  padding: 1em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+
+.autorizacion .autorizacion-header .imagen {
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 160px;
+  max-height: 100px;
+  margin-right: 1em;
+}
+
+.autorizacion .autorizacion-header .imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.autorizacion .autorizacion-header .informacion .nombre-envia {
+  color: #00A8A7;
+  font-family: 'arial';
+  font-weight: bold;
+}
+
+.autorizacion .autorizacion-header .informacion p {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: inherit;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.autorizacion .autorizacion-header .informacion .sub-inforamacion {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.autorizacion .autorizacion-header .informacion .sub-inforamacion > p {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.autorizacion .autorizacion-header .informacion .sub-inforamacion > p span {
+  font-size: 13px;
+}
+
+.autorizacion .autorizacion-header .informacion .sub-inforamacion > p :hover {
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s all;
+}
+
+.autorizacion .autorizacion-body {
+  padding: 0 16px;
+}
+
+.autorizacion .autorizacion-body textarea {
+  height: 80px;
+}
+
+.autorizacion .autorizacion-body .botones {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.autorizacion .autorizacion-body .botones button {
+  padding: 13px 0;
+  width: 160px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: none;
+  border-radius: 2px;
+  font-family: sans-serif !important;
+}
+
+.autorizacion .autorizacion-body .botones :hover {
+  border: none;
+}
+
+.autorizacion .autorizacion-body .botones-consulta {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.autorizacion .autorizacion-body .botones-consulta button {
+  padding: 0.6em 0.7em;
+  margin-right: 10px !important;
+  font-weight: bold;
+}
+
+
+.no-pad {
+  padding: 0 !important;
+}
+
+.pad-r-05 {
+  padding-right: 0.5em;
+}
+
+.pad-l-05 {
+  padding-left: 0.5em;
+}
+
+.pad-05 {
+  padding: 0.5em !important;
+}
+
+.pad-1 {
+  width: 100%;
+  padding: 0.5em;
+  padding-bottom: 1em;
+}
+
+.aguaM {
+  background: #00a8a7;
+  color: white;
+}
+
+.color-aguaM {
+  color: #00a8a7;
+}
+
+.col-ex {
+  margin: 0.5em;
+}
+
+.col-ex .contenido {
+  padding: 0.2em !important;
+}
+
+.col-ex .panel-contenido {
+  padding: 0.6em;
+  box-sizing: border-box;
+}
+
+.col-ex .cont-rdo {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.col-ex .cont-rdo label {
+  margin: 0;
+}
+
+.col-ex .cont-rdo .rdo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 0.2em;
+}
+
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+.cont-checbox, .cont-dilatacion {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.cont-checbox div, .cont-dilatacion div {
+  width: auto;
+}
+
+.cont-checbox .checkbox, .cont-dilatacion .checkbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cont-checbox .checkbox label, .cont-dilatacion .checkbox label {
+  width: 30px;
+}
+
+.enviarAutorizacion {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.btn-enviarAutorizacion {
+  width: 80%;
+}
+
+.desfibrilacion {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.eliminar_desfibrilacion {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-top: -50px;
+}
+
+.btn_eliminar_des {
+  border: none;
+  background: none;
+  margin-top: -55px;
+}
+
+.texareaAutorizacion {
+  margin: 10px 0;
+}
+
+.usuario-autorizacion {
+  color: #fff;
+  background: #1F95D0;
+  font-size: 30px;
+  padding: 20px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.autorizacion {
+  box-shadow: 0 0 0 1px #ccc;
+  margin: 10px 4px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.autorizacion-texto, .autorizacion-titulo {
+  text-align: center;
+}
+
+.autorizacion-titulo {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.btn-aprobar-rechazar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.btn-aprobar-rechazar > button {
+  margin: 15px 10px;
+}
+
+.col-centro {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.estado-autorizacion {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #ccc;
+}
+
+.estado-autorizacion p {
+  margin: 0 10px;
+}
+
+.enviado {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.enviado p {
+  font-size: 16px;
+  color: #1F95D0;
+  margin: 0 15px;
+}
+
+.rechazado {
+  color: rgba(229, 74, 101, 0.9);
+}
+
+.aprobado {
+  color: rgba(57, 194, 52, 0.89);
+}
+
+.sin-evaluar {
+  color: #1F95D0;
+}
+
+.ocultar {
+  overflow: hidden;
+}
+
+.top-panel {
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-enviarAutorizacion {
+    margin-top: 10px;
+  }
+  .top-panel-tratamiento {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .btn-aprobar-rechazar > button {
+    margin: 15px 5px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .btn-aprobar-rechazar > button {
+    margin: 15px 0 15px 2px;
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1054px) {
+  #time1{
+  width: 85% !important;
+  }
+  #julios1{
+  width: 85% !important;
+  }
+  #time2{
+  width: 85% !important;
+  }
+  #julios2{
+  width: 85% !important;
+  }
+  #time3{
+  width: 85% !important;
+  }
+  #julios3{
+  width: 85% !important;
+  }
+}
+@media screen and (max-width: 512px){
+  #time1{
+  width: 85% !important;
+  }
+  #julios1{
+  width: 85% !important;
+  }
+  #time2{
+  width: 85% !important;
+  }
+  #julios2{
+  width: 85% !important;
+  }
+  #time3{
+  width: 85% !important;
+  }
+  #julios3{
+  width: 85% !important;
+  }
+}

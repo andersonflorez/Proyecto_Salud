@@ -1,0 +1,7 @@
+.floo
+.flooignore
+prepros.cfg
+.brackets.json
+node_modules
+gulpfile.js
+package.json

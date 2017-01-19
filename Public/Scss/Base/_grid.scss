@@ -1,0 +1,472 @@
+/*==== GRID v2.0 ====*/
+
+/*
+* Nueva Grid basada en flexbox
+* Características:
+* - Orientada a objetos:
+*   - Reutilizable
+*   - Independiente
+* - Facil de usar
+* - Más específica para suplir necesidades
+* - Nuevas formas para maquetar:
+*   Ahora casi todas las propiedades de flexbox están encapsuladas
+*   en clases orientadas a objetos que son muy útiles y poderosas
+*
+* Esta Grid permite hacer más, con menos código CSS.
+* Fue creada con ese objetivo en mente.
+*/
+
+// Flexible blocks
+@each $breakpoint, $value in $specific_breakpoints {
+
+  @include desde($value) {
+
+    //Grid
+    @for $i from 1 through 20 {
+      .#{$breakpoint}_flex_col#{$i*5}{
+        flex: $i*5%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+    }
+
+    .#{$breakpoint}_nowrap{
+      flex-wrap: nowrap !important;
+    }
+
+    .#{$breakpoint}_flex{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .#{$breakpoint}_align_center {
+      align-items: center;
+    }
+
+    .#{$breakpoint}_align_end {
+      align-items: flex-end;
+    }
+
+    .#{$breakpoint}_align_start {
+      align-items: flex-start;
+    }
+
+    .#{$breakpoint}_justify_center{
+      justify-content: center;
+    }
+
+    .#{$breakpoint}_justify_end{
+      justify-content: flex-end;
+    }
+
+    .#{$breakpoint}_justify_start{
+      justify-content: flex-start;
+    }
+
+    .#{$breakpoint}_justify_between{
+      justify-content: space-between;
+    }
+
+    .#{$breakpoint}_justify_around{
+      justify-content: space-around;
+    }
+
+    .#{$breakpoint}_in_columns{
+      flex-direction: column;
+      flex-wrap: nowrap !important;
+    }
+
+    .#{$breakpoint}_grow_up{
+      flex-grow: 1;
+    }
+
+    .#{$breakpoint}_dont_grow{
+      flex-grow: 0;
+    }
+  }
+}
+
+/*==== GRID v1.0 ====*/
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+/*==== FILA > COLUMNA(S) > CONTENIDO ====*/
+
+/*Fila: contenedor principal*/
+.flex{
+  display: flex;
+}
+
+[class^="fila"]{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+
+  [class^="columna"]{
+    display: flex;
+    flex-wrap: wrap;
+    .contenido{
+      padding: 1em;
+      width: 100%;
+      box-sizing: border-box;
+    }//Contenido
+  }
+
+}
+
+.fila-auto{
+  .columna{
+    flex: auto;
+  }
+}
+
+//Diseño de columnas para móviles
+@include desde-hasta(0px,movil) {
+  //Columnas estáticas:
+  .columna-movil--1{
+    flex: 10% 0 0;
+  }
+
+  .columna-movil--2{
+    flex: 20% 0 0;
+  }
+
+  .columna-movil--3{
+    flex: 30% 0 0;
+  }
+
+  .columna-movil--4{
+    flex: 40% 0 0;
+  }
+
+  .columna-movil--5{
+    flex: 50% 0 0;
+  }
+
+  .columna-movil--6{
+    flex: 60% 0 0;
+  }
+
+  .columna-movil--7{
+    flex: 70% 0 0;
+  }
+
+  .columna-movil--8{
+    flex: 80% 0 0;
+  }
+
+  .columna-movil--9{
+    flex: 90% 0 0;
+  }
+
+  .columna-movil--10{
+    flex: 100% 0 0;
+  }
+
+  //Columnas dinámicas:
+  .columna-movil-1{
+    flex: 1;
+  }
+
+  .columna-movil-2{
+    flex: 2;
+  }
+
+  .columna-movil-3{
+    flex: 3;
+  }
+
+  .columna-movil-4{
+    flex: 4;
+  }
+
+  .columna-movil-5{
+    flex: 5;
+  }
+
+  .columna-movil-6{
+    flex: 6;
+  }
+
+  .columna-movil-7{
+    flex: 7;
+  }
+
+  .columna-movil-8{
+    flex: 8;
+  }
+
+  .columna-movil-9{
+    flex: 9;
+  }
+
+  .columna-movil-10{
+    flex: 10;
+  }
+}
+
+
+//Diseño de columnas para tablets
+@include desde-hasta(movil,tablet) {
+  //Columnas estáticas:
+  .columna-tablet--1{
+    flex: 10% 0 0;
+  }
+
+  .columna-tablet--2{
+    flex: 20% 0 0;
+  }
+
+  .columna-tablet--3{
+    flex: 30% 0 0;
+  }
+
+  .columna-tablet--4{
+    flex: 40% 0 0;
+  }
+
+  .columna-tablet--5{
+    flex: 50% 0 0;
+  }
+
+  .columna-tablet--6{
+    flex: 60% 0 0;
+  }
+
+  .columna-tablet--7{
+    flex: 70% 0 0;
+  }
+
+  .columna-tablet--8{
+    flex: 80% 0 0;
+  }
+
+  .columna-tablet--9{
+    flex: 90% 0 0;
+  }
+
+  .columna-tablet--10{
+    flex: 100% 0 0;
+  }
+
+  //Columnas dinámicas:
+  .columna-tablet-1{
+    flex: 1;
+  }
+
+  .columna-tablet-2{
+    flex: 2;
+  }
+
+  .columna-tablet-3{
+    flex: 3;
+  }
+
+  .columna-tablet-4{
+    flex: 4;
+  }
+
+  .columna-tablet-5{
+    flex: 5;
+  }
+
+  .columna-tablet-6{
+    flex: 6;
+  }
+
+  .columna-tablet-7{
+    flex: 7;
+  }
+
+  .columna-tablet-8{
+    flex: 8;
+  }
+
+  .columna-tablet-9{
+    flex: 9;
+  }
+
+  .columna-tablet-10{
+    flex: 10;
+  }
+
+}
+
+////Diseño de columnas para dispositivos web
+@include desde-hasta(tablet,web) {
+  //Columnas estáticas:
+  .columna--1{
+    flex: 10% 0 0;
+  }
+
+  .columna--2{
+    flex: 20% 0 0;
+  }
+
+  .columna--3{
+    flex: 30% 0 0;
+  }
+
+  .columna--4{
+    flex: 40% 0 0;
+  }
+
+  .columna--5{
+    flex: 50% 0 0;
+  }
+
+  .columna--6{
+    flex: 60% 0 0;
+  }
+
+  .columna--7{
+    flex: 70% 0 0;
+  }
+
+  .columna--8{
+    flex: 80% 0 0;
+  }
+
+  .columna--9{
+    flex: 90% 0 0;
+  }
+
+  .columna--10{
+    flex: 100% 0 0;
+  }
+
+  //Columnas dinámicas:
+
+  .columna-1{
+    flex: 1;
+  }
+
+  .columna-2{
+    flex: 2;
+  }
+
+  .columna-3{
+    flex: 3;
+  }
+
+  .columna-4{
+    flex: 4;
+  }
+
+  .columna-5{
+    flex: 5;
+  }
+
+  .columna-6{
+    flex: 6;
+  }
+
+  .columna-7{
+    flex: 7;
+  }
+
+  .columna-8{
+    flex: 80%;
+  }
+
+  .columna-9{
+    flex: 90%;
+  }
+
+  .columna-10{
+    flex: 100%;
+  }
+
+}
+
+////Diseño de columnas para dispositivos con pantallas grandes (HD)
+@include desde(web) {
+  //Columnas estáticas:
+  .columna-hd--1{
+    flex: 10% 0 0;
+  }
+
+  .columna-hd--2{
+    flex: 20% 0 0;
+  }
+
+  .columna-hd--3{
+    flex: 30% 0 0;
+  }
+
+  .columna-hd--4{
+    flex: 40% 0 0;
+  }
+
+  .columna-hd--5{
+    flex: 50% 0 0;
+  }
+
+  .columna-hd--6{
+    flex: 60% 0 0;
+  }
+
+  .columna-hd--7{
+    flex: 70% 0 0;
+  }
+
+  .columna-hd--8{
+    flex: 80% 0 0;
+  }
+
+  .columna-hd--9{
+    flex: 90% 0 0;
+  }
+
+  .columna-hd--10{
+    flex: 100% 0 0;
+  }
+
+  //Columnas dinámicas:
+  .columna-hd-1{
+    flex: 1;
+  }
+
+  .columna-hd-2{
+    flex: 2;
+  }
+
+  .columna-hd-3{
+    flex: 3;
+  }
+
+  .columna-hd-4{
+    flex: 4;
+  }
+
+  .columna-hd-5{
+    flex: 5;
+  }
+
+  .columna-hd-6{
+    flex: 6;
+  }
+
+  .columna-hd-7{
+    flex: 7;
+  }
+
+  .columna-hd-8{
+    flex: 8;
+  }
+
+  .columna-hd-9{
+    flex: 9;
+  }
+
+  .columna-hd-10{
+    flex: 10;
+  }
+
+}

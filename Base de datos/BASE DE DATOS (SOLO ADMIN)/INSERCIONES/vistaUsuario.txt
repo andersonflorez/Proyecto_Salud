@@ -1,0 +1,118 @@
+CALL  spRegistrarTipoevento('tipo evento 1');
+CALL  spRegistrarTipoevento('tipo evento 2');
+CALL  spRegistrarTipoevento('tipo evento 3');
+
+CALL spRegistrarEnteexterno('ente externo 1');
+CALL spRegistrarEnteexterno('ente externo 2');
+CALL spRegistrarEnteexterno('ente externo 3');
+
+INSERT INTO tbl_persona (idPersona, primerNombre, segundoNombre, primerApellido, segundoApellido, idTipoDocumento, numeroDocumento, lugarExpedicionDocumento, fechaNacimiento, lugarNacimiento, sexo, direccion, telefono, correoElectronico, grupoSanguineo, ciudad, departamento, pais, urlFoto) VALUES (1, 'Jose', 'David', 'Arias', 'Jimenez', 1, 1045050623, 'Támesis', '1997-11-21', 'Támesis', 'Hombre', 'Cll 9 # 10-38', 6014645, 'jose32@gmail.com', 'O+', 'Medellín', 'Antioquia', 'Colombia', 'Public/Img/Usuarios/FotosPersona/1.jpg');
+
+INSERT INTO tbl_persona (idPersona, primerNombre, segundoNombre, primerApellido, segundoApellido, idTipoDocumento, numeroDocumento, lugarExpedicionDocumento, fechaNacimiento, lugarNacimiento, sexo, direccion, telefono, correoElectronico, grupoSanguineo, ciudad, departamento, pais, urlFoto) VALUES (2, 'Alejandra', 'Fernanda', 'Perea', 'Parra', 1, 1045340274, 'Támesis', '1997-07-25', 'Támesis', 'Mujer', 'Cll 25 # 20-32', 6014645, 'aleja32@gmail.com', 'W+', 'Medellín', 'Antioquia', 'Colombia', 'Public/Img/Usuarios/FotosPersona/5.jpg');
+
+INSERT INTO tbl_persona (idPersona, primerNombre, primerApellido, segundoApellido, idTipoDocumento, numeroDocumento, lugarExpedicionDocumento, fechaNacimiento, lugarNacimiento, sexo, direccion, telefono, correoElectronico, grupoSanguineo, ciudad, departamento, pais, urlFoto) VALUES (3, 'Jim', 'Agudelo', 'Mejia', 1, 1045050568, 'Támesis', '1997-06-13', 'Támesis', 'Mujer', 'Cll 9 # 5-12', 2857104, 'jim32@gmail.com', 'O-', 'Medellín', 'Antioquia', 'Colombia', 'Public/Img/Usuarios/FotosPersona/6.jpg');
+
+INSERT INTO tbl_persona (idPersona, primerNombre, segundoNombre, primerApellido, segundoApellido, idTipoDocumento, numeroDocumento, lugarExpedicionDocumento, fechaNacimiento, lugarNacimiento, sexo, direccion, telefono, correoElectronico, grupoSanguineo, ciudad, departamento, pais, urlFoto) VALUES (4, 'Emilio', 'Jorge', 'Idarraga', 'Henao', 1, 103826827, 'Manchester', '1976-06-05', 'Londres', 'Hombre', 'Crr 1 # 45C-128', 4225799, 'jorge32@gmail.com', 'Y+', 'Medellín', 'Antioquia', 'Colombia', 'Public/Img/Usuarios/FotosPersona/2.jpg');
+
+INSERT INTO tbl_persona (idPersona, primerNombre, segundoNombre, primerApellido, segundoApellido, idTipoDocumento, numeroDocumento, lugarExpedicionDocumento, fechaNacimiento, lugarNacimiento, sexo, direccion, telefono, correoElectronico, grupoSanguineo, ciudad, departamento, pais, urlFoto) VALUES (5, 'Tommy', 'Bond', 'Perver', 'Travolta', 1, 1649235864, 'Cuba', '1943-07-24', 'Congo', 'Hombre', 'Crr 18 # 74A-34', 2649452, 'tommy@gmail.com', 'C+', 'Medellín', 'Antioquia', 'Colombia', 'Public/Img/Usuarios/FotosPersona/3.jpg');
+
+
+INSERT INTO tbl_cuentausuario (idUsuario, idPersona, usuario, clave, idRol) VALUES (1, 1, 'jose32', 123, 1);
+
+INSERT INTO tbl_cuentausuario (idUsuario, idPersona, usuario, clave, idRol) VALUES (2, 2, 'aleja32', 1234, 7);
+
+INSERT INTO tbl_cuentausuario (idUsuario, idPersona, usuario, clave, idRol) VALUES (3, 3, 'jim32', 1235, 7);
+
+INSERT INTO tbl_cuentausuario (idUsuario, idPersona, usuario, clave, idRol) VALUES (4, 4, 'jorge32', 12367, 7);
+
+INSERT INTO tbl_cuentausuario (idUsuario, idPersona, usuario, clave, idRol) VALUES (5, 5, 'tommy32', 123678, 7);
+
+
+INSERT INTO tbl_chat (idReceptorInicial, idUsuarioExterno, estadoTabla) VALUES (11, 10, 0);
+
+INSERT INTO tbl_chat (idReceptorInicial, idUsuarioExterno, estadoTabla) VALUES (12, 10, 0);
+
+INSERT INTO tbl_chat (idReceptorInicial, idUsuarioExterno, estadoTabla) VALUES (13, 10, 0);
+
+INSERT INTO tbl_chat (idReceptorInicial, idUsuarioExterno, estadoTabla) VALUES (14, 10, 0);
+
+
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Había una vez una familia de ratones que vivía en la despensa de una casa', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'pero temiendo siempre los ataques de un enorme gato, los ratones no querían salir', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Ya fuera de día o de noche este terrible enemigo los tenía vigilados.', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Un buen día decidieron poner fin al problema', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'por lo que celebraron una asamblea a petición del jefe de los ratones, que era el más viejo de todos', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'El jefe de los ratones dijo a los presentes:', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Os he mandado reunir para que entre todos encontremos una solución. ¡No podemos vivir así!', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, '¡Pido la palabra! - Dijo un ratoncillo muy atento.', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Atemos un cascabel al gato, y así sabremos en todo momento por dónde anda.', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Tan interesante propuesta fue aceptada por todos los roedores entre grandes aplausos y felicidad.', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Con el cascabel estarían salvados, porque su campanilleo avisaría de la llegada del enemigo con el tiempo para ponerse a salvo.', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, '¡Silencio! – Gritó el ratón jefe, para luego decir:', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Queda pendiente una cuestión importante:', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, '¿Quien de todos le pone el cascabel al gato?', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Al oír esto, los ratoncitos se quedaron repentinamente callados, muy callados', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'porque no podían contestar a aquella pregunta.', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (5, 'Y corrieron de nuevo a sus cuevas-, hambrientos y tristes.', 1);
+
+
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (6, 'Érase una vez una bruja que se ganaba la vida vendiendo encantamientos y fórmulas para calmar la cólera de los dioses.', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (6, 'Con esta promesa a la bruja no le faltaban clientes y conseguía grandes cantidades de dinero de este modo de vida. ', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (6, 'Pero un día fue acusada de ir contra las leyes y la llevaron ante los jueces supremos del país.', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (6, 'Así, tras un juicio muy corto, la culparon y la hicieron condenar a muerte. ', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (6, 'Viéndola salir de la sala del juicio, una de las personas presentes le dijo:', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (6, 'Bruja, tú que decías poder desviar la cólera de los dioses, ¿Cómo no has podido persuadir a los hombres?', 1);
+
+
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (3, 'Pensó un día un lobo cambiar su apariencia para así facilitar la obtención de su comida. ', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (3, 'Se metió entonces en una piel de oveja y se fue a pastar con el rebaño', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (3, 'despistando totalmente al pastor.', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (3, 'Al atardecer, para su protección, fue llevado junto con todo el rebaño a un encierro', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (3, 'quedando la puerta asegurada', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (3, 'Pero en la noche, buscando el pastor su provisión de carne para el día siguiente', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (3, 'tomó al lobo creyendo que era un cordero y lo sacrificó al instante.', 1);
+
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (4, 'Un niño metió su mano en un recipiente lleno de dulces.', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (4, 'Y tomó lo más que pudo, pero cuando trató de sacar la mano', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (4, 'el cuello del recipiente no le permitió hacerlo.', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (4, 'Como tampoco quería perder aquellos dulces', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (4, 'lloraba amargamente su desilusión.', 1);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (4, 'Un amigo que estaba cerca le dijo:', 0);
+
+INSERT INTO tbl_mensaje (idChat, mensaje, tipo) VALUES (4, 'Confórmate solamente con la mitad y podrás sacar la mano con los dulces.', 1);

@@ -1,0 +1,77 @@
+ .cont-rdo,.cont-checbox{
+     width: 50%;
+ }
+
+.cont-antecedente .cont-radio input[type=radio] {
+  border: 1px solid #18b9e3;
+  transition: all ease 0.4s;
+}
+
+
+input[type=radio],
+input[type=checkbox] {
+  display: none;
+}
+
+.radio label, .checkbox label {
+  border-radius: 1px;
+  border: solid 1px #18b9e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em 0;
+  width: 60px;
+  transition: all ease 0.4s;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.checkbox label {
+  margin-bottom: 10px;
+}
+
+.checkbox label:before {
+  border-radius: 3px;
+}
+
+input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+  color: #f3f3f3;
+  background: #18b9e3;
+  text-align: center;
+}
+
+label.rdo-redondo {
+  border-radius: 50%;
+  width: 20px;
+}
+
+input[type=radio] + label.rdo-redondo:before {
+  content: "";
+  position: relative;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0);
+}
+
+input[type=radio]:checked + label.rdo-redondo:before {
+  content: "";
+  position: relative;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  transition: all 0.2s;
+}
+
+.cont-checbox{
+    width: 40%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.rdo{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
